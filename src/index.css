@@ -1,30 +1,106 @@
-body{
-
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.nav-container {
-  position: fixed; /* Fixes the navbar to the viewport */
-  top: 0;          /* Positions the navbar at the top */
-  left: 0;         /* Aligns the navbar to the left */
-  width: 100%;     /* Ensures the navbar spans the entire width of the viewport */
-  z-index: 1000;   /* Keeps the navbar above other content */
-  background-color: #fff; /* Ensures a background color for visibility */
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for separation */
-  background-color: white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
 }
 
 .nav-links {
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center;
-  gap: 6rem; 
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
 }
 
-.logo{
-  width: 10rem;
-  height: 10rem;
+.nav-links li {
+  display: inline;
+}
+
+.nav-links .btn {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 40px;
+  background: linear-gradient(180deg, #f8f9fa, #fff);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-buttons .btn, .play-button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.features-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+.feature {
+  text-align: left;
+}
+
+.feature img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.statistics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat {
+  background: #f0f0f0;
+  padding: 20px;
+  flex-basis: calc(50% - 20px);
+  border-radius: 10px;
+  text-align: center;
 }
