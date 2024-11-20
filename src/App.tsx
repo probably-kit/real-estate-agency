@@ -19,18 +19,19 @@ function App() {
 
         {/* Hero Section */}
         <section className="hero-section">
-          <div className="hero-content">
-            <h1>Designing Your Next Chapter.</h1>
-            <p>Where Dreams Become Apartments. Transforming Visions into Vibrant Living Spaces.</p>
-            <div className="hero-buttons">
-              <a href="#" className="btn">Explore Projects</a>
-              <button className="play-button">Our Process</button>
+          <div className="hero-image-container">
+            <img src="src/assets/Background main image.jpg" alt="Building" />
+            <div className="overlay-content">
+              <h1>Designing Your Next Chapter.</h1>
+              <p>Where Dreams Become Apartments. Transforming Visions into Vibrant Living Spaces.</p>
+              <div className="hero-buttons">
+                <a href="#" className="btn">Explore Projects</a>
+                <button className="play-button">Our Process</button>
+              </div>
             </div>
           </div>
-          <div className="hero-image">
-            <img src="src/assets/Background image.webp" alt="Building" />
-          </div>
         </section>
+
 
         {/* Features Section */}
         <section className="features-section">

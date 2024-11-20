@@ -39,21 +39,47 @@ body {
 }
 
 .hero-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  padding: 40px;
-  background: linear-gradient(180deg, #f8f9fa, #fff);
-}
-
-.hero-content {
+  position: relative;
+  width: 80%;
+  height:90vh  ; /* Adjust as needed */
+  margin-inline:2em ;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero-content h1 {
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Ensure the container fits the full height */
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  border-radius: 10px;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 25%; /* Center vertically */
+  left: 30%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Centering trick */
+  text-align: center; /* Center text */
+  color: white; /* Text color */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.overlay-content h1 {
   font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.overlay-content p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
 }
 
 .hero-buttons {
@@ -62,17 +88,12 @@ body {
 }
 
 .hero-buttons .btn, .play-button {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
-}
-
-.hero-image img {
-  width: 100%;
-  border-radius: 10px;
 }
 
 .features-section {
