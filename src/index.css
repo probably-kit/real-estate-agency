@@ -52,6 +52,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%; /* Ensure the container fits the full height */
+  border-radius: 0 0 15% 15%  ;
 }
 
 .hero-image-container img {
@@ -64,18 +65,44 @@ body {
 .overlay-content {
   position: absolute;
   top: 25%; /* Center vertically */
-  left: 30%; /* Center horizontally */
+  left: 25%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Centering trick */
-  text-align: center; /* Center text */
-  color: white; /* Text color */
+  color: #eee; /* Text color */
   padding: 20px;
-  border-radius: 10px;
+  
+}
+.svg-inverted-border {
+  
+  position:absolute;
+  left: 98.5%;
+  bottom:5.7%;  
+  
+}
+.svg-inverted-border2 {
+  
+  position:absolute;
+  left: 84.5%;
+  bottom:0;  
+  
+}
+
+.hero-feedback{
+  background-color: white ;
+  border-radius: 10px 0 10px 0;
+  width: 16rem;
+  font-size: 16pxpx;
+  position: absolute;
+  top: 94.2%;
+  left: 86%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .overlay-content h1 {
   font-size: 3rem;
   margin-bottom: 10px;
-}
+} 
 
 .overlay-content p {
   font-size: 1.25rem;
