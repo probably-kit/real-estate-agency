@@ -43,20 +43,36 @@ function App() {
 
 
         {/* Features Section */}
-        <section className="features-section">
-          <div className="feature">
-            <img src="src/assets/forest home.webp" alt="Property" />
-            <h3>Find Your Dream Property At The Best Price</h3>
-            <p>We support our clients at every stage of the buying and selling process, ensuring a seamless and stress-free experience from start to finish.</p>
-            <a href="#" className="btn">Learn More</a>
+
+        <section className="features-container">
+          <div className="left-section">
+            <img src="src/assets/forest home.webp" alt="Property Image" />
+            <div>
+              <h2>Find Your Dream Property At The Best Price</h2>
+              <p>We support our clients at every stage of the buying and selling process, ensuring a seamless and stress-free experience from start to finish.</p>
+              <a href="#" className="button">Learn More</a>
+            </div>
           </div>
-          <div className="statistics">
-            <div className="stat"><strong>100k+</strong> Property Constructed</div>
-            <div className="stat"><strong>100+</strong> Award Winning</div>
-            <div className="stat"><strong>50k+</strong> Satisfied Clients</div>
-            <div className="stat"><strong>5+</strong> Years of Experience</div>
+          <div className="right-section">
+            <div className="info-card">
+              <h3>100k+</h3>
+              <p>Property Constructed</p>
+            </div>
+            <div className="info-card">
+              <h3>100+</h3>
+              <p>Award Winning</p>
+            </div>
+            <div className="info-card">
+              <h3>50K+</h3>
+              <p>Satisfied Clients</p>
+            </div>
+            <div className="info-card">
+              <h3>5+</h3>
+              <p>Years of Experience</p>
+            </div>
           </div>
         </section>
+
       </div>
     </>
   )
