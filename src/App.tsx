@@ -25,7 +25,7 @@ function App() {
               <h1>Designing Your Next Chapter.</h1>
               <p>Where Dreams Become Apartments. <br /> Transforming Visions into Vibrant Living Spaces.</p>
               <div className="hero-buttons">
-                <a href="#" className="btn">Explore Projects</a>
+                <a href="#" className="transparent-btn">Explore Projects</a>
                 <a href="#" className="btn">Our Process</a>
               </div>
             </div>
@@ -50,7 +50,8 @@ function App() {
             <div>
               <h2>Find Your Dream Property At The Best Price</h2>
               <p>We support our clients at every stage of the buying and selling process, ensuring a seamless and stress-free experience from start to finish.</p>
-              <a href="#" className="button">Learn More</a>
+              <br />
+              <a href="#" className="transparent-btn">Learn More</a>
             </div>
           </div>
           <div className="right-section">
@@ -63,7 +64,7 @@ function App() {
               <p>Award Winning</p>
             </div>
             <div className="info-card">
-              <h3>50K+</h3>
+              <h3>50k+</h3>
               <p>Satisfied Clients</p>
             </div>
             <div className="info-card">
