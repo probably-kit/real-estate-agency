@@ -1,3 +1,5 @@
+import React from 'react';
+import PropertyCard from 'src/PropertyCard.tsx';
 
 
 function App() {
@@ -71,7 +73,20 @@ function App() {
               <h3>5+</h3>
               <p>Years of Experience</p>
             </div>
+            
           </div>
+        </section>
+
+        <section className="property">
+        <PropertyCard
+        imageUrl="https://via.placeholder.com/400x300"
+        title="Sunnyvale Retreat"
+        price="$450,000"
+        address="23 Sunnyvale Rd"
+        beds={4}
+        baths={3}
+        area={2500}
+      />
         </section>
 
       </div>
