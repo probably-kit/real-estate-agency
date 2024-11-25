@@ -234,3 +234,10 @@ body {
 .button:hover {
   background-color: #444;
 }
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}

@@ -1,8 +1,38 @@
-import React from 'react';
-import PropertyCard from 'src/PropertyCard.tsx';
+import PropertyCard from './PropertyCard';
+
 
 
 function App() {
+  const properties = [
+    {
+      imageUrl: 'https://via.placeholder.com/400x300',
+      title: 'Sunnyvale Retreat',
+      price: '$450,000',
+      address: '23 Sunnyvale Rd',
+      beds: 4,
+      baths: 3,
+      area: 2500,
+    },
+    {
+      imageUrl: 'https://via.placeholder.com/400x300',
+      title: 'Mountain View Escape',
+      price: '$550,000',
+      address: '45 Mountain View Rd',
+      beds: 5,
+      baths: 4,
+      area: 3000,
+    },
+    {
+      imageUrl: 'https://via.placeholder.com/400x300',
+      title: 'Downtown Delight',
+      price: '$600,000',
+      address: '789 Downtown St',
+      beds: 3,
+      baths: 2,
+      area: 1800,
+    },
+    // Add more properties as needed
+  ];
 
   return (
     <>
@@ -73,20 +103,23 @@ function App() {
               <h3>5+</h3>
               <p>Years of Experience</p>
             </div>
-            
+
           </div>
         </section>
 
-        <section className="property">
-        <PropertyCard
-        imageUrl="https://via.placeholder.com/400x300"
-        title="Sunnyvale Retreat"
-        price="$450,000"
-        address="23 Sunnyvale Rd"
-        beds={4}
-        baths={3}
-        area={2500}
-      />
+        <section className="property-grid">
+          {properties.map((property, index) => (
+            <PropertyCard
+              key={index}
+              imageUrl={property.imageUrl}
+              title={property.title}
+              price={property.price}
+              address={property.address}
+              beds={property.beds}
+              baths={property.baths}
+              area={property.area}
+            />
+          ))}
         </section>
 
       </div>
