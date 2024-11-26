@@ -1,8 +1,23 @@
 import PropertyCard from './PropertyCard';
-
+import { useState, useEffect } from 'react';
 
 
 function App() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const properties = [
     {
       imageUrl: 'https://via.placeholder.com/400x300',
@@ -38,7 +53,7 @@ function App() {
     <>
       <div className="container">
         {/* Navigation Bar */}
-        <nav className="navbar">
+        <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
           <div className="logo">WERNER HOME</div>
           <ul className="nav-links">
             <li><a href="#">Home</a></li>
