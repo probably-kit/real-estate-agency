@@ -51,9 +51,8 @@ body {
 
 .hero-section {
   position: relative;
-  width: 80%;
-  height: 90vh;
-  /* Adjust as needed */
+  width: 95%;
+  height: 85vh;
   margin-inline: 2em;
   display: flex;
   justify-content: center;
@@ -72,20 +71,15 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Ensures the image covers the container */
-  border-radius: 10px;
+  border-radius: 60px;
 }
 
 .overlay-content {
   position: absolute;
   top: 25%;
-  /* Center vertically */
   left: 25%;
-  /* Center horizontally */
   transform: translate(-50%, -50%);
-  /* Centering trick */
   color: #eee;
-  /* Text color */
   padding: 20px;
 
 }
@@ -93,7 +87,7 @@ body {
 .svg-inverted-border {
 
   position: absolute;
-  left: 98.5%;
+  left: 98.7%;
   bottom: 5.7%;
 
 }
@@ -101,14 +95,14 @@ body {
 .svg-inverted-border2 {
 
   position: absolute;
-  left: 84.5%;
+  left: 84.7%;
   bottom: 0;
 
 }
 
 .hero-feedback {
   background-color: white;
-  border-radius: 10px 0 10px 0;
+  border-radius: 30px 0 10px 0;
   width: 16rem;
   font-size: 16pxpx;
   position: absolute;
@@ -116,8 +110,37 @@ body {
   left: 86%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around ;
+  gap: 1em;
+ 
 }
+
+.hero-feedback .avatars {
+  display: flex;
+  margin-left: 1em;
+  margin-top: 0.5em;
+}
+
+.hero-feedback .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin-left: -10px;
+}
+
+.hero-feedback .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-feedback .details {
+  display: flex;
+}
+
 
 .overlay-content h1 {
   font-size: 3rem;

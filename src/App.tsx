@@ -83,7 +83,15 @@ function App() {
               <path d="M25,0 L25,25 L0,25 A25,25 0 0,0 25,0 Z" fill="white" />
             </svg>
             <div className="hero-feedback">
-              <p>Happy Clients</p>
+              <div className="avatars">
+                <div className="avatar"><img src="https://via.placeholder.com/40" alt="Client 1" /></div>
+                <div className="avatar"><img src="https://via.placeholder.com/40" alt="Client 2" /></div>
+                <div className="avatar"><img src="https://via.placeholder.com/40" alt="Client 3" /></div>
+                <div className="avatar"><img src="https://via.placeholder.com/40" alt="Client 4" /></div>
+              </div>
+              <div className="details">
+                50k+ Happy Clients
+              </div>
             </div>
           </div>
         </section>
