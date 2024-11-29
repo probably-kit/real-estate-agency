@@ -9,9 +9,11 @@ body {
 }
 
 .container {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* grid-template-rows: auto 1fr auto; */
+  /* min-height: 100vh; */
+  justify-content: center;
 }
 
 .navbar {
@@ -269,17 +271,18 @@ body {
 
 .property-grid {
   display: grid;
-  width: 80%;
+  width: 60%;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-inline: 2em;
+  align-self: center;
 }
 
 .standards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-   /* Reduced gap between cards */
   padding: 20px;
+  width: 60%;
+  align-self: center ;
   background-color: #f9f9f9; /* Light background for the grid */
 }
 
