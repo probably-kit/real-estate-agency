@@ -1,0 +1,28 @@
+.faq-section {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    cursor: pointer;
+  }
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-top: 10px;
+  }
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+  .rotate {
+    transform: rotate(180deg);
+  }
+  
