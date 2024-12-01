@@ -69,7 +69,7 @@ function App() {
         {/* Hero Section */}
         <section className="hero-section">
           <div className="hero-image-container">
-            <img src="src/assets/Background main image.jpg" alt="Building" />
+            <img src="/Background main image.jpg" alt="Building" />
             <div className="overlay-content">
               <h1>Designing Your Next Chapter.</h1>
               <p>Where Dreams Become Apartments. <br /> Transforming Visions into Vibrant Living Spaces.</p>
@@ -103,7 +103,7 @@ function App() {
 
         <section className="features-container">
           <div className="left-section">
-            <img src="src/assets/forest home.webp" alt="Property Image" />
+            <img src="/forest home.webp" alt="Property Image" />
             <div>
               <h2>Find Your Dream Property At The Best Price</h2>
               <p>We support our clients at every stage of the buying and selling process, ensuring a seamless and stress-free experience from start to finish.</p>
