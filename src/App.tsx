@@ -1,5 +1,6 @@
-import PropertyCard from './PropertyCard';
-import FaqSection from './FAQSection';
+import PropertyCard from './components/PropertyCard';
+import FaqSection from './components/FAQSection';
+import Footer from './components/Footer';
 import { useState, useEffect } from 'react';
 
 
@@ -178,9 +179,14 @@ function App() {
             <p>Developing customized strategies to showcase properties and attract buyers.</p>
           </div>
         </section>
-          <section><FaqSection /></section>
-          
-        
+        <section>
+          <FaqSection />
+        </section>
+        <Footer/>
+
+
+
+
 
 
       </div>
