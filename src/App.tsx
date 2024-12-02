@@ -1,5 +1,6 @@
 import PropertyCard from './components/PropertyCard';
 import FaqSection from './components/FAQSection';
+import TestimonialSlider from './components/Testimonials';
 import Footer from './components/Footer';
 import { useState, useEffect } from 'react';
 
@@ -182,6 +183,7 @@ function App() {
         <section>
           <FaqSection />
         </section>
+        <TestimonialSlider/>
         <Footer/>
 
 
