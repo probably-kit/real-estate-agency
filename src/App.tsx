@@ -2,6 +2,7 @@ import PropertyCard from './components/PropertyCard';
 import FaqSection from './components/FAQSection';
 import TestimonialSlider from './components/Testimonials';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 import { useState, useEffect } from 'react';
 
 
@@ -56,7 +57,7 @@ function App() {
     <>
       <div className="container">
         {/* Navigation Bar */}
-        <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+        {/* <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
           <div className="logo">WERNER HOME</div>
           <ul className="nav-links">
             <li><a href="#">Home</a></li>
@@ -65,7 +66,8 @@ function App() {
             <li><a href="#">Blogs</a></li>
             <li><a href="#" className="btn">Let's Talk</a></li>
           </ul>
-        </nav>
+        </nav> */}
+        <Navbar/>
 
         {/* Hero Section */}
         <section className="hero-section">
