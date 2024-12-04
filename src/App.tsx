@@ -3,25 +3,10 @@ import FaqSection from './components/FAQSection';
 import TestimonialSlider from './components/Testimonials';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import { useState, useEffect } from 'react';
+import HeroSection from './components/HeroSection';
 
 
 function App() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 0);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   const properties = [
     {
       imageUrl: 'https://via.placeholder.com/400x300',
@@ -56,51 +41,8 @@ function App() {
   return (
     <>
       <div className="container">
-        {/* Navigation Bar */}
-        {/* <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-          <div className="logo">WERNER HOME</div>
-          <ul className="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Property</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#" className="btn">Let's Talk</a></li>
-          </ul>
-        </nav> */}
-        <Navbar/>
-
-        {/* Hero Section */}
-        <section className="hero-section">
-          <div className="hero-image-container">
-            <img src="/Background main image.jpg" alt="Building" />
-            <div className="overlay-content">
-              <h1>Designing Your Next Chapter.</h1>
-              <p>Where Dreams Become Apartments. <br /> Transforming Visions into Vibrant Living Spaces.</p>
-              <div className="hero-buttons">
-                <a href="#" className="transparent-btn">Explore Projects</a>
-                <a href="#" className="btn">Our Process</a>
-              </div>
-            </div>
-            <svg className="svg-inverted-border" width="28" height="26">
-              <path d="M25,0 L25,25 L0,25 A25,25 0 0,0 25,0 Z" fill="white" />
-            </svg>
-            <svg className="svg-inverted-border2" width="25" height="25">
-              <path d="M25,0 L25,25 L0,25 A25,25 0 0,0 25,0 Z" fill="white" />
-            </svg>
-            <div className="hero-feedback">
-              <div className="avatars">
-                <div className="avatar"><img src="https://via.placeholder.com/40" alt="Client 1" /></div>
-                <div className="avatar"><img src="https://via.placeholder.com/40" alt="Client 2" /></div>
-                <div className="avatar"><img src="https://via.placeholder.com/40" alt="Client 3" /></div>
-                <div className="avatar"><img src="https://via.placeholder.com/40" alt="Client 4" /></div>
-              </div>
-              <div className="details">
-                50k+ Happy Clients
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <Navbar />
+        <HeroSection />
 
         {/* Features Section */}
 
@@ -185,8 +127,8 @@ function App() {
         <section>
           <FaqSection />
         </section>
-        <TestimonialSlider/>
-        <Footer/>
+        <TestimonialSlider />
+        <Footer />
 
 
 
