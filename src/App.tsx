@@ -4,7 +4,7 @@ import TestimonialSlider from './components/Testimonials';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-
+import FeaturesSection from './components/FeaturesSection';
 
 function App() {
   const properties = [
@@ -43,8 +43,8 @@ function App() {
       <div className="container">
         <Navbar />
         <HeroSection />
-
-        {/* Features Section */}
+        <FeaturesSection/>
+        {/* Features Section
 
         <section className="features-container">
           <div className="left-section">
@@ -75,7 +75,7 @@ function App() {
             </div>
 
           </div>
-        </section>
+        </section> */}
 
         <section className="property-grid">
           {properties.map((property, index) => (
