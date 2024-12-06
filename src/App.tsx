@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import FeaturesSection from './components/FeaturesSection';
 import StandardsGrid from './components/StandardsGrid';
+import ContactSection from './components/ContactSection';
 
 function App() {
  
@@ -19,6 +20,7 @@ function App() {
         <StandardsGrid/>
         <FaqSection />
         <TestimonialSlider />
+        <ContactSection/>
         <Footer />
       </div>
   )
