@@ -20,17 +20,35 @@ const Navbar: React.FC = () => {
   }, [isScrolled]);
 
   return (
-        <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-          <div className="logo">WERNER HOME</div>
-          <ul className="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Property</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#" className="btn">Let's Talk</a></li>
-          </ul>
-        </nav>
-    )
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="logo">WERNER HOME</div>
+      <div className="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Property</a>
+        <a href="#">Blogs</a>
+      </div>
+      <div className='connect-btn'>
+        <a href="">Let's talk</a>
+        <svg
+          className="icon"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+        >
+          <path
+            className="icon-path"
+            
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4.343 15.657L15.657 4.343m0 0v9.9m0-9.9h-9.9"
+          />
+        </svg>
+      </div>
+
+    </nav>
+  )
 }
 
 export default Navbar;
