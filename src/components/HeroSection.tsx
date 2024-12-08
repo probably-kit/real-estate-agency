@@ -15,9 +15,9 @@ const HeroSection: React.FC = () => {
             <a href="#" className="transparent-btn">
               Explore Projects
             </a>
-            <a href="#" className="btn">
+            {/* <a href="#" className="btn">
               Our Process
-            </a>
+            </a> */}
           </div>
         </div>
         <svg className="svg-inverted-border" width="28" height="26">
@@ -37,9 +37,7 @@ const HeroSection: React.FC = () => {
             <div className="avatar">
               <img src="https://via.placeholder.com/40" alt="Client 3" />
             </div>
-            <div className="avatar">
-              <img src="https://via.placeholder.com/40" alt="Client 4" />
-            </div>
+            
           </div>
           <div className="details">50k+ Happy Clients</div>
         </div>

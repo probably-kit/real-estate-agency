@@ -1,11 +1,11 @@
 .hero-section {
   position: relative;
-  width: 95%;
+  width: 1500px;
   height: 85vh;
-  margin-inline: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
 }
 
 .hero-image-container {
@@ -59,13 +59,13 @@
 
 .svg-inverted-border {
   position: absolute;
-  left: 98.7%;
+  left: 98.4%;
   bottom: 5.7%;
 }
 
 .svg-inverted-border2 {
   position: absolute;
-  left: 84.7%;
+  left: 82.4%;
   bottom: 0;
 }
 
@@ -76,7 +76,7 @@
   font-size: 16px;
   position: absolute;
   top: 94.2%;
-  left: 86%;
+  left: 84%;
   display: flex;
   align-items: center;
   justify-content: space-around;
