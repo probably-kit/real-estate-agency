@@ -1,0 +1,46 @@
+.connect-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 30px;
+    border: 1px solid #221d23;
+    color: #221d23;
+    gap: 0.5em;
+    padding: 1em;
+    background-image: linear-gradient(to right, #221d23 50%, #ffffff00 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.1s ease-out;
+    text-decoration: none;
+  }
+  
+  .connect-btn a {
+    
+    color: #221d23;
+    
+    transition: color 0.1s ease-out;
+  }
+  
+  .connect-btn:hover {
+    background-position: left bottom;
+    cursor: pointer;
+    color: #fff;
+    
+  }
+  
+  
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .icon-path {
+    stroke: #221d23;
+    transition: stroke 0.1s;
+  }
+  
+  .connect-btn:hover .icon-path {
+    stroke: #fff;
+    
+  }

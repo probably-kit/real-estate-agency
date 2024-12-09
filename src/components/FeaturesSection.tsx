@@ -1,4 +1,5 @@
 import React from 'react';
+import SlideButton from './SlideButton';
 import './FeaturesSection.css';
 
 const FeaturesSection: React.FC = () => {
@@ -12,7 +13,7 @@ const FeaturesSection: React.FC = () => {
             We support our clients at every stage of the buying and selling process, ensuring a seamless and stress-free experience from start to finish.
           </p>
           <br />
-          <a href="#" className="transparent-btn">Learn More</a>
+          <SlideButton caption='Learn More'/>
         </div>
       </div>
       <div className="right-section">

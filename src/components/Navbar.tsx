@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Navbar.css"
+import SlideButton from './SlideButton';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -28,7 +29,7 @@ const Navbar: React.FC = () => {
         <a href="#">Property</a>
         <a href="#">Blogs</a>
       </div>
-      <div className='connect-btn'>
+      {/* <div className='connect-btn'>
         <a href="">Let's talk</a>
         <svg
           className="icon"
@@ -45,8 +46,8 @@ const Navbar: React.FC = () => {
             d="M4.343 15.657L15.657 4.343m0 0v9.9m0-9.9h-9.9"
           />
         </svg>
-      </div>
-
+      </div> */}
+      <SlideButton/>
     </nav>
   )
 }
