@@ -19,7 +19,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
         {question}
         {/* <span className={`arrow ${isOpen ? 'rotate' : ''}`}>&#9662;</span> */}
         <svg className={`arrow ${isOpen ? 'rotate' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="24" height="24" fill="white" />
+          <rect width="24" height="24" fill="" />
           <path d="M17 9.5L12 14.5L7 9.5" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </div>
@@ -58,6 +58,7 @@ const FaqSection: React.FC = () => {
 
   return (
     <div className="faq-section">
+      <h1>Frequently Asked Questions</h1>
       {faqData.map((faq, index) => (
         <FaqItem key={index} question={faq.question} answer={faq.answer} />
       ))}

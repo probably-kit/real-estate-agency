@@ -1,12 +1,20 @@
 .faq-section {
     width: 1000px;
-    
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
   }
+
+  .faq-section h1{
+    align-self: center;
+  }
+
   .faq-item {
-    border-bottom: 1px solid #ddd;
+    background-color: #fafafa;
     padding: 15px;
+    border-radius: 15px;
     cursor: pointer;
+    margin: 1.5em;
   }
   .faq-question {
     display: flex;
@@ -17,6 +25,7 @@
   .faq-answer {
     max-height: 0;
     overflow: hidden;
+    font-size: 18px;
     transition: max-height 0.3s ease;
     padding-top: 10px;
   }
