@@ -3,11 +3,12 @@ import "./SlideButton.css"
 
 interface SlideButtonProps {
     caption?: string;
+    width?: string;
   }
 
-  const SlideButton: React.FC<SlideButtonProps> = ({ caption = "Let's talk" }) => {
+  const SlideButton: React.FC<SlideButtonProps> = ({ caption = "Let's talk", width="auto" }) => {
     return (
-      <a href="" className='connect-btn'>
+      <a href="" className='connect-btn' style={{width}}>
         <span >{caption}</span>
         <svg
           className="icon"

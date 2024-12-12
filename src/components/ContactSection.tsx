@@ -1,4 +1,5 @@
 import React from 'react';
+import SlideButton from './SlideButton';
 import './ContactSection.css';
 
 const ContactSection: React.FC = () => {
@@ -12,7 +13,7 @@ const ContactSection: React.FC = () => {
         <p className="description">
           Our knowledgeable team provides trusted expertise for informed real estate decisions, offering tailored support to meet your unique needs and demonstrating proven success through a strong track record of client satisfaction.
         </p>
-        <a className="button" href="#">Contact Us</a>
+        <SlideButton caption='Contact Us' width='8em'/>
       </div>
     </div>
   );
