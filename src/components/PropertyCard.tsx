@@ -112,7 +112,10 @@ const PropertyGrid: React.FC = () => {
     },
   ];
   return(
-    <section className="property-grid">
+    <div className='property-container'>
+      <h1>Explore Our Apartaments & Buildings</h1>
+      <section className="property-grid">
+          
           {properties.map((property, index) => (
             <PropertyCard
               key={index}
@@ -126,6 +129,8 @@ const PropertyGrid: React.FC = () => {
             />
           ))}
         </section>
+    </div>
+    
   )
 }
 
