@@ -4,14 +4,17 @@
   max-width: 600px;
   margin: 0 auto;
 }
+.testimonial-slider h2{
+margin-bottom: 1.5em;
+}
 
 .testimonial-card {
   position: relative;
-  background-color: #f9f9f9;
+  background-color: #fafafa;
   width: 600px;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
 }
 
 .testimonial-image {
@@ -38,18 +41,45 @@
 
 .testimonial-navigation {
   margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 .nav-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+  border: 2px solid #000;
+  background-color: transparent;
   cursor: pointer;
-  margin: 0 5px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .nav-button:hover {
-  background-color: #0056b3;
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.nav-button svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.nav-button:hover svg {
+  transform: translateX(2px);
+}
+
+.nav-button.reverse:hover svg {
+  transform: translateX(-2px);
+}
+
+.nav-button.reverse {
+  border-color: #000;
 }

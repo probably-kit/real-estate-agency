@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Testimonials.css'; 
+import './Testimonials.css';
 
 interface Testimonial {
   name: string;
@@ -66,8 +66,18 @@ const TestimonialSlider: React.FC = () => {
         </div>
       </div>
       <div className="testimonial-navigation">
-        <button onClick={handlePrev} className="nav-button prev">&larr;</button>
-        <button onClick={handleNext} className="nav-button next">&rarr;</button>
+        {/* <button onClick={handlePrev} className="nav-button prev">&larr;</button>
+        <button onClick={handleNext} className="nav-button next">&rarr;</button> */}
+        <button onClick={handlePrev} className="nav-button reverse" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <button onClick={handleNext} className="nav-button" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
       </div>
     </div>
   );
