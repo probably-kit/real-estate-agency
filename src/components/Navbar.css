@@ -7,12 +7,15 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #fff;
   transition: box-shadow 0.3s ease;
 }
 
 .navbar.scrolled {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-weight: bold;
 }
 
 .nav-links {
@@ -23,52 +26,49 @@
   gap: 3em; 
 }
 
-.nav-links a{
-    text-decoration: none;
-    color: inherit;
-}
-
-.connect-btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 30px;
-  border: 1px solid #221d23;
-  color: #221d23;
-  gap: 0.5em;
-  padding: 1em;
-  background-image: linear-gradient(to right, #221d23 50%, #fff 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: background-position 0.1s ease-out;
-}
-
-.connect-btn a {
+.nav-links a {
   text-decoration: none;
-  color: #221d23;
-  transition: color 0.1s ease-out;
+  color: inherit;
 }
 
-.connect-btn:hover {
-  background-position: left bottom;
+/* Hamburger icon is hidden by default (only for small screens) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
-.connect-btn:hover a {
-  color: #fff;
-  /* background-color: #221d23 ; */
-}
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  /* Show hamburger and hide inline nav-links on small screens */
+  .hamburger {
+    display: block;
+  }
 
-.icon {
-  width: 24px;
-  height: 24px;
-}
+  /* Initially hide the nav-links in mobile mode */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    right: 10px;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1em;
+    gap: 1em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border-radius: 4px;
+  }
 
-.icon-path {
-  stroke: #221d23;
-  transition: stroke 0.1s;
-}
+  /* When .open class is added, nav-links become visible */
+  .nav-links.open {
+    display: flex;
+  }
 
-.connect-btn:hover .icon-path {
-  stroke: #fff;
+  
+  .slide-button-container {
+    display: none;
+  }
   
 }
