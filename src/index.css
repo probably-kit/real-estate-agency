@@ -21,19 +21,6 @@ body {
   
 }
 
-.transparent-btn {
-  border-radius: 30px;
-  border: 2px solid white;
-  text-decoration: none;
-  color: #fff;
-  padding: 1em;
-}
-
-.transparent-btn:hover {
-  color: #000;
-  background-color: #fff;
-}
-
 
 
 .left-section .transparent-btn {
