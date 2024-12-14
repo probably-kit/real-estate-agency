@@ -36,4 +36,36 @@
   .rotate {
     transform: rotate(180deg);
   }
+
+  @media only screen and (max-width: 768px) {
+    .faq-section {
+      width: 90%; /* Reduce width for smaller screens */
+      padding: 0 1em; /* Add padding to avoid touching screen edges */
+    }
+  
+    .faq-section h1 {
+      font-size: 1.5rem; /* Adjust heading size */
+      text-align: center; /* Center align the heading */
+    }
+  
+    .faq-item {
+      padding: 10px; /* Reduce padding */
+      border-radius: 10px; /* Slightly smaller radius */
+      margin: 1em; /* Adjust spacing between items */
+    }
+  
+    .faq-question {
+      font-size: 1rem; /* Reduce font size */
+    }
+  
+    .faq-answer {
+      font-size: 0.9rem; /* Slightly smaller font size for answers */
+      line-height: 1.4; /* Adjust line height for readability */
+    }
+  
+    .arrow {
+      width: 20px; /* Reduce arrow size */
+      height: 20px;
+    }
+  }
   
