@@ -84,3 +84,66 @@ margin-bottom: 1.5em;
 .nav-button.reverse {
   border-color: #000;
 }
+
+@media only screen and (max-width: 768px) {
+  .testimonial-slider {
+    max-width: 90%;
+    margin: 0 auto 2em;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .testimonial-slider h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .testimonial-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px;
+  }
+
+  .testimonial-content {
+    text-align: center;
+  }
+
+  .location {
+    font-size: 0.9rem;
+  }
+
+  .rating {
+    font-size: 1rem;
+  }
+
+  .testimonial-navigation {
+    margin-top: 15px;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .nav-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid #000;
+  }
+
+  .nav-button svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .nav-button:hover {
+    transform: scale(1.05);
+  }
+}
