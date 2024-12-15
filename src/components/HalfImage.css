@@ -1,0 +1,59 @@
+.halfImage-container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  .halfImage-container.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .image-section {
+    flex: 1;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .content-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Example styling if you don't have SlideButton defined */
+  .button {
+    align-self: start;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+  
+  .button:hover {
+    background-color: #333;
+  }
+  
