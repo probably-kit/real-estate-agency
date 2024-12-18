@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Navbar.css";
 import SlideButton from './SlideButton';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -37,10 +38,10 @@ const Navbar: React.FC = () => {
       </button>
 
       <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Property</a>
-        <a href="#">Blogs</a>
+        <Link to="/">Home</Link>
+        <Link to="/about">About Us</Link>
+        <Link to="/property">Property</Link>
+        <Link to="/blog">Blogs</Link>
       </div>
       <div className='slide-button-container'>
       <SlideButton />
