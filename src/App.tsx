@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { PropertiesProvider } from './Contexts/PropertiesContext'
 import PropertyGrid from './components/PropertyCard';
 import FaqSection from './components/FAQSection';
 import TestimonialSlider from './components/Testimonials';
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="container">
       <Navbar />
+      <PropertiesProvider>
       <Routes>
         <Route path='/' element={
           <>
@@ -54,6 +56,7 @@ function App() {
           </>
         }/>
       </Routes>
+      </PropertiesProvider>
 
 
 
