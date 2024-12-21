@@ -1,5 +1,7 @@
 import React from 'react';
 import './PropertyCard.css';
+import { useNavigate } from 'react-router-dom';
+import { propertyData } from '../data/propertyData ';
 
 type PropertyCardProps = {
   imageUrl: string;
@@ -82,43 +84,19 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
 };
 
 const PropertyGrid: React.FC = () => {
-  const properties = [
-    {
-      imageUrl: 'https://via.placeholder.com/400x300',
-      title: 'Sunnyvale Retreat',
-      price: '$450,000',
-      address: '23 Sunnyvale Rd',
-      beds: 4,
-      baths: 3,
-      area: 2500,
-    },
-    {
-      imageUrl: 'https://via.placeholder.com/400x300',
-      title: 'Mountain View Escape',
-      price: '$550,000',
-      address: '45 Mountain View Rd',
-      beds: 5,
-      baths: 4,
-      area: 3000,
-    },
-    {
-      imageUrl: 'https://via.placeholder.com/400x300',
-      title: 'Downtown Delight',
-      price: '$600,000',
-      address: '789 Downtown St',
-      beds: 3,
-      baths: 2,
-      area: 1800,
-    },
-  ];
-  return(
-    <div className='property-container'>
-      <h1>Explore Our Apartaments & Buildings</h1>
+  const navigate = useNavigate();
+
+  const handleCardClick = (id: string) => {
+    navigate(`/property/${id}`); // Navigate to the property details page
+  };
+
+  return (
+    <div className="property-container">
+      <h1>Explore Our Top Properties</h1>
       <section className="property-grid">
-          
-          {properties.map((property, index) => (
+        {propertyData.slice(0, 3).map((property) => ( // Display top 3 properties
+          <div key={property.id} onClick={() => handleCardClick(property.id)}>
             <PropertyCard
-              key={index}
               imageUrl={property.imageUrl}
               title={property.title}
               price={property.price}
@@ -127,11 +105,11 @@ const PropertyGrid: React.FC = () => {
               baths={property.baths}
               area={property.area}
             />
-          ))}
-        </section>
+          </div>
+        ))}
+      </section>
     </div>
-    
-  )
-}
+  );
+};
 
 export default PropertyGrid;

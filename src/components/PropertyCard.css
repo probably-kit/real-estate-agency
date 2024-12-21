@@ -12,6 +12,14 @@
   border-radius: 10px;
   overflow: hidden;
   background-color: #fafafa;
+  cursor: pointer;
+  box-shadow: 0 0px 0x rgba(0, 0, 0, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .property-image {
