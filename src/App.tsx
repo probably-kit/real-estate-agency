@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { PropertiesProvider } from './Contexts/PropertiesContext'
-import PropertyGrid from './components/PropertyCard';
+import PropertyGrid from './components/PropertyGrid';
 import FaqSection from './components/FAQSection';
 import TestimonialSlider from './components/Testimonials';
 import Footer from './components/Footer';
@@ -9,7 +9,7 @@ import HeroSection from './components/HeroSection';
 import FeaturesSection from './components/FeaturesSection';
 import StandardsGrid from './components/StandardsGrid';
 import ContactSection from './components/ContactSection';
-import HalfImageSection from './components/HalfImage';
+import PropertyItem from './components/PropertyItem';
 
 function App() {
 
@@ -30,29 +30,9 @@ function App() {
             <ContactSection />
           </>
         } />
-        <Route path='/property-item' element={
+        <Route path="/property/:id" element={
           <>
-            <HalfImageSection
-              title="What Makes Us Your Ideal Real Estate Partner?"
-              description="Our knowledgeable team provides trusted expertise for informed real estate decisions, offering tailored support to meet your unique needs and demonstrating proven success through a strong track record of client satisfaction."
-              imageSrc="https://via.placeholder.com/400x300"
-              buttonCaption="Contact Us"
-              imagePosition="right"
-            />
-            <HalfImageSection
-              title="What Makes Us Your Ideal Real Estate Partner?"
-              description="Our knowledgeable team provides trusted expertise for informed real estate decisions, offering tailored support to meet your unique needs and demonstrating proven success through a strong track record of client satisfaction."
-              imageSrc="https://via.placeholder.com/400x300"
-              buttonCaption="Contact Us"
-              imagePosition="left"
-            />
-            <HalfImageSection
-              title="What Makes Us Your Ideal Real Estate Partner?"
-              description="Our knowledgeable team provides trusted expertise for informed real estate decisions, offering tailored support to meet your unique needs and demonstrating proven success through a strong track record of client satisfaction."
-              imageSrc="https://via.placeholder.com/400x300"
-              buttonCaption="Contact Us"
-              imagePosition="right"
-            />
+            <PropertyItem/>
           </>
         }/>
       </Routes>
