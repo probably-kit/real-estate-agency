@@ -18,24 +18,29 @@ function App() {
     <div className="container">
       <Navbar />
       <PropertiesProvider>
-      <Routes>
-        <Route path='/' element={
-          <>
-            <HeroSection />
-            <FeaturesSection />
-            <PropertyGrid />
-            <StandardsGrid />
-            <FaqSection />
-            <TestimonialSlider />
-            <ContactSection />
-          </>
-        } />
-        <Route path="/property/:id" element={
-          <>
-            <PropertyItem/>
-          </>
-        }/>
-      </Routes>
+        <Routes>
+          <Route path='/' element={
+            <>
+              <HeroSection />
+              <FeaturesSection />
+              <PropertyGrid displayCount={3} />
+              <StandardsGrid />
+              <FaqSection />
+              <TestimonialSlider />
+              <ContactSection />
+            </>
+          } />
+          <Route path="/property" element={
+            <>
+              <PropertyGrid displayCount={Infinity}/>
+            </>
+          } />
+          <Route path="/property/:id" element={
+            <>
+              <PropertyItem />
+            </>
+          } />
+        </Routes>
       </PropertiesProvider>
 
 
