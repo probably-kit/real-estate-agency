@@ -40,6 +40,13 @@ function App() {
               <PropertyItem />
             </>
           } />
+          <Route path="/about" element={
+            <>
+              <StandardsGrid />
+              <TestimonialSlider />
+              <FaqSection />
+            </>
+          } />
         </Routes>
       </PropertiesProvider>
 
