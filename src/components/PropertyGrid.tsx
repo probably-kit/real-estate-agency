@@ -3,12 +3,24 @@ import { useNavigate } from 'react-router-dom';
 import { useProperties } from '../Contexts/PropertiesContext';
 import PropertyCard from './PropertyCard';
 import './PropertyCard.css';
+import './Slider.css';
+import ReactSlider from 'react-slider';
+// import './Slider.css'; // Add your slider styles here
 
 type CityOption = 'gdansk' | 'sopot' | 'gdynia' | 'rumia' | 'reda';
 
 interface PropertyGridProps {
   showFilters?: boolean;
   displayCount?: number;
+}
+
+interface ThumbProps {
+  style?: React.CSSProperties;
+  [key: string]: any; // Dynamic props if needed
+}
+
+interface ThumbState {
+  valueNow: number; // Current value of the thumb
 }
 
 const PropertyGrid: React.FC<PropertyGridProps> = ({
@@ -21,16 +33,17 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
   const [searchText, setSearchText] = useState('');
   const [selectedCities, setSelectedCities] = useState<CityOption[]>([]);
   const [primaryMarketFilter, setPrimaryMarketFilter] = useState(false);
-  const [minPrice, setMinPrice] = useState<number>(0);
-  const [maxPrice, setMaxPrice] = useState<number>(1000000);
-  const [filtersVisible, setFiltersVisible] = useState(false); // Toggle for additional filters
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000000]);
+  const [filtersVisible, setFiltersVisible] = useState(false);
 
   const handleCityToggle = (city: CityOption) => {
     setSelectedCities((prev) =>
-      prev.includes(city)
-        ? prev.filter((c) => c !== city)
-        : [...prev, city]
+      prev.includes(city) ? prev.filter((c) => c !== city) : [...prev, city]
     );
+  };
+
+  const handleSliderChange = (values: [number, number]) => {
+    setPriceRange(values);
   };
 
   const filteredProperties = properties.filter((property) => {
@@ -47,7 +60,7 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
       return false;
     }
     const numericPrice = parseInt(property.price.replace(/[^\d]/g, ''), 10);
-    if (numericPrice < minPrice || numericPrice > maxPrice) {
+    if (numericPrice < priceRange[0] || numericPrice > priceRange[1]) {
       return false;
     }
     return true;
@@ -68,7 +81,7 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
           <button
             key={city}
             className={`city-button ${
-              selectedCities.includes(city) ? 'active' : ''
+              selectedCities.includes(city as CityOption) ? 'active' : ''
             }`}
             onClick={() => handleCityToggle(city as CityOption)}
           >
@@ -78,7 +91,10 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
       </div>
 
       {/* Toggleable Filters */}
-      <div className="filter-toggle" onClick={() => setFiltersVisible(!filtersVisible)}>
+      <div
+        className="filter-toggle"
+        onClick={() => setFiltersVisible(!filtersVisible)}
+      >
         <svg
           className={`arrow-icon ${filtersVisible ? 'rotated' : ''}`}
           xmlns="http://www.w3.org/2000/svg"
@@ -118,23 +134,28 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
             />
           </div>
 
-          <div className="filter-item price-range">
-            <label htmlFor="minPrice">Min Price:</label>
-            <input
-              type="number"
-              id="minPrice"
-              value={minPrice}
-              onChange={(e) => setMinPrice(Number(e.target.value))}
+          <div className="filter-item">
+            <label>Price Range:</label>
+            <ReactSlider
+              className="horizontal-slider"
+              thumbClassName="example-thumb"
+              trackClassName="example-track"
+              value={priceRange}
               min={0}
+              max={1000000}
+              step={10000}
+              minDistance={50000}
+              onChange={handleSliderChange}
+              ariaLabel={['Lower thumb', 'Upper thumb']}
+              ariaValuetext={(state) => `Thumb value ${state}`}
+              renderThumb={(props: ThumbProps, state: ThumbState) => (
+                <div {...props}>{}</div>
+              )}
             />
-            <label htmlFor="maxPrice">Max Price:</label>
-            <input
-              type="number"
-              id="maxPrice"
-              value={maxPrice}
-              onChange={(e) => setMaxPrice(Number(e.target.value))}
-              min={0}
-            />
+            <div className="price-range-values">
+              <span>Min: ${priceRange[0]}</span>
+              <span>Max: ${priceRange[1]}</span>
+            </div>
           </div>
         </div>
       )}
