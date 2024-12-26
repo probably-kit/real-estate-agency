@@ -23,7 +23,7 @@ function App() {
             <>
               <HeroSection />
               <FeaturesSection />
-              <PropertyGrid displayCount={3} />
+              <PropertyGrid showFilters={false} displayCount={3} />
               <StandardsGrid />
               <FaqSection />
               <TestimonialSlider />
