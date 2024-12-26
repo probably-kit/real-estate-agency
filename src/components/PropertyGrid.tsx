@@ -1,84 +1,102 @@
-// PropertyGrid.tsx
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useProperties } from '../Contexts/PropertiesContext';
 import PropertyCard from './PropertyCard';
 import './PropertyCard.css';
 
-// Define the possible city options
-type CityOption = 'gdansk' | 'sopot' | 'gdynia' | 'rumia' | 'reda' | ''; 
-// '' represents "All Cities"
+type CityOption = 'gdansk' | 'sopot' | 'gdynia' | 'rumia' | 'reda';
 
-// Define the props interface
 interface PropertyGridProps {
-  showFilters?: boolean;      // Determines whether to display the filters section
-  displayCount?: number;      // Number of property cards to display; if undefined, display all
+  showFilters?: boolean;
+  displayCount?: number;
 }
 
 const PropertyGrid: React.FC<PropertyGridProps> = ({
-  showFilters = true,        // Default to true if not provided
-  displayCount,              // Undefined by default
+  showFilters = true,
+  displayCount,
 }) => {
   const navigate = useNavigate();
   const { properties } = useProperties();
 
-  // --- Filter States ---
   const [searchText, setSearchText] = useState('');
-  const [cityFilter, setCityFilter] = useState<CityOption>('');
+  const [selectedCities, setSelectedCities] = useState<CityOption[]>([]);
   const [primaryMarketFilter, setPrimaryMarketFilter] = useState(false);
-  
-  // Price range states
   const [minPrice, setMinPrice] = useState<number>(0);
-  const [maxPrice, setMaxPrice] = useState<number>(1000000); // Set any default upper bound
+  const [maxPrice, setMaxPrice] = useState<number>(1000000);
+  const [filtersVisible, setFiltersVisible] = useState(false); // Toggle for additional filters
 
-  const handleCardClick = (id: string) => {
-    navigate(`/property/${id}`);
+  const handleCityToggle = (city: CityOption) => {
+    setSelectedCities((prev) =>
+      prev.includes(city)
+        ? prev.filter((c) => c !== city)
+        : [...prev, city]
+    );
   };
 
-  // --- Filter the properties based on the current filter states ---
   const filteredProperties = properties.filter((property) => {
-    // 1) Search filter: check if the title includes the search text
-    if (searchText) {
-      const lowerTitle = property.title.toLowerCase();
-      if (!lowerTitle.includes(searchText.toLowerCase())) {
-        return false;
-      }
-    }
-
-    // 2) City filter (only apply if cityFilter is not empty)
-    if (cityFilter && property.city !== cityFilter) {
+    if (
+      searchText &&
+      !property.title.toLowerCase().includes(searchText.toLowerCase())
+    ) {
       return false;
     }
-
-    // 3) Primary Market filter
+    if (selectedCities.length > 0 && !selectedCities.includes(property.city)) {
+      return false;
+    }
     if (primaryMarketFilter && property.primaryMarket !== true) {
       return false;
     }
-
-    // 4) Price Range filter
-    // Convert price string to numeric value, e.g., "$450,000" to 450000
     const numericPrice = parseInt(property.price.replace(/[^\d]/g, ''), 10);
     if (numericPrice < minPrice || numericPrice > maxPrice) {
       return false;
     }
-
-    return true; // Property passes all filters
+    return true;
   });
 
-  // --- Determine the properties to display based on displayCount ---
-  const displayedProperties = displayCount !== undefined
-    ? filteredProperties.slice(0, displayCount)
-    : filteredProperties;
+  const displayedProperties =
+    displayCount !== undefined
+      ? filteredProperties.slice(0, displayCount)
+      : filteredProperties;
 
   return (
     <div className="property-container">
       <h1>Explore Our Top Properties</h1>
 
-      {/* --- Filters Section (conditionally rendered based on showFilters prop) --- */}
-      {showFilters && (
+      {/* City Buttons */}
+      <div className="city-filters">
+        {['gdansk', 'sopot', 'gdynia', 'rumia', 'reda'].map((city) => (
+          <button
+            key={city}
+            className={`city-button ${
+              selectedCities.includes(city) ? 'active' : ''
+            }`}
+            onClick={() => handleCityToggle(city as CityOption)}
+          >
+            {city.charAt(0).toUpperCase() + city.slice(1)}
+          </button>
+        ))}
+      </div>
+
+      {/* Toggleable Filters */}
+      <div className="filter-toggle" onClick={() => setFiltersVisible(!filtersVisible)}>
+        <svg
+          className={`arrow-icon ${filtersVisible ? 'rotated' : ''}`}
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+
+      {filtersVisible && showFilters && (
         <div className="filters">
-          {/* Search by Title */}
           <div className="filter-item">
             <label htmlFor="searchText">Search by Title:</label>
             <input
@@ -90,24 +108,6 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
             />
           </div>
 
-          {/* City Filter */}
-          <div className="filter-item">
-            <label htmlFor="cityFilter">City:</label>
-            <select
-              id="cityFilter"
-              value={cityFilter}
-              onChange={(e) => setCityFilter(e.target.value as CityOption)}
-            >
-              <option value="">All Cities</option>
-              <option value="gdansk">Gdansk</option>
-              <option value="sopot">Sopot</option>
-              <option value="gdynia">Gdynia</option>
-              <option value="rumia">Rumia</option>
-              <option value="reda">Reda</option>
-            </select>
-          </div>
-
-          {/* Primary Market Filter */}
           <div className="filter-item">
             <label htmlFor="primaryMarket">Primary Market:</label>
             <input
@@ -118,7 +118,6 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
             />
           </div>
 
-          {/* Price Range Filter */}
           <div className="filter-item price-range">
             <label htmlFor="minPrice">Min Price:</label>
             <input
@@ -127,7 +126,6 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
               value={minPrice}
               onChange={(e) => setMinPrice(Number(e.target.value))}
               min={0}
-              placeholder="0"
             />
             <label htmlFor="maxPrice">Max Price:</label>
             <input
@@ -136,19 +134,17 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
               value={maxPrice}
               onChange={(e) => setMaxPrice(Number(e.target.value))}
               min={0}
-              placeholder="1000000"
             />
           </div>
         </div>
       )}
 
-      {/* --- Display Filtered Properties --- */}
       <section className="property-grid">
         {displayedProperties.length > 0 ? (
           displayedProperties.map((property) => (
-            <div 
-              key={property.id} 
-              onClick={() => handleCardClick(property.id)} 
+            <div
+              key={property.id}
+              onClick={() => navigate(`/property/${property.id}`)}
               className="property-card-wrapper"
             >
               <PropertyCard id={property.id} />

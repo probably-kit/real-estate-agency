@@ -80,6 +80,73 @@
   
 }
 
+.city-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.city-button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.city-button:hover {
+  background-color: #f0f0f0;
+}
+
+.city-button.active {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.filter-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.price-range {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+
 @media only screen and (max-width: 768px) {
   .property-container {
     padding: 1em;
@@ -116,7 +183,7 @@
 
   .property-price {
     font-size: 1.25rem; 
-  }
+  }cd 
 
   .property-address {
     font-size: 0.9rem;
