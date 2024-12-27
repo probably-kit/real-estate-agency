@@ -5,7 +5,6 @@ import PropertyCard from './PropertyCard';
 import './PropertyCard.css';
 import './Slider.css';
 import ReactSlider from 'react-slider';
-// import './Slider.css'; // Add your slider styles here
 
 type CityOption = 'gdansk' | 'sopot' | 'gdynia' | 'rumia' | 'reda';
 
@@ -42,6 +41,10 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
     );
   };
 
+  const handlePrimaryMarketToggle = () => {
+    setPrimaryMarketFilter((prev) => !prev);
+  };
+
   const handleSliderChange = (values: [number, number]) => {
     setPriceRange(values);
   };
@@ -75,7 +78,7 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
     <div className="property-container">
       <h1>Explore Our Top Properties</h1>
 
-      {/* City Buttons */}
+      {/* City and Primary Market Buttons */}
       <div className="city-filters">
         {['gdansk', 'sopot', 'gdynia', 'rumia', 'reda'].map((city) => (
           <button
@@ -88,6 +91,14 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
             {city.charAt(0).toUpperCase() + city.slice(1)}
           </button>
         ))}
+
+        {/* Primary Market Button */}
+        <button
+          className={`city-button ${primaryMarketFilter ? 'active' : ''}`}
+          onClick={handlePrimaryMarketToggle}
+        >
+          Primary Market
+        </button>
       </div>
 
       {/* Toggleable Filters */}
@@ -124,16 +135,8 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
             />
           </div>
 
-          <div className="filter-item">
-            <label htmlFor="primaryMarket">Primary Market:</label>
-            <input
-              type="checkbox"
-              id="primaryMarket"
-              checked={primaryMarketFilter}
-              onChange={(e) => setPrimaryMarketFilter(e.target.checked)}
-            />
-          </div>
-
+          {/* Removed the Primary Market Checkbox */}
+          
           <div className="filter-item">
             <label>Price Range:</label>
             <ReactSlider
@@ -153,8 +156,8 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
               )}
             />
             <div className="price-range-values">
-              <span>Min: ${priceRange[0]}</span>
-              <span>Max: ${priceRange[1]}</span>
+              <span>Min: ${priceRange[0].toLocaleString()}</span>
+              <span>Max: ${priceRange[1].toLocaleString()}</span>
             </div>
           </div>
         </div>
@@ -180,3 +183,4 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
 };
 
 export default PropertyGrid;
+  
