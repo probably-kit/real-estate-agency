@@ -11,8 +11,8 @@
   .example-thumb {
     height: 20px;
     width: 20px;
-    background-color: white;
-    border: 2px solid #007bff;
+    background-color: #f9f9f9;
+    border: 2px solid #221d23;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -36,7 +36,7 @@
   }
   
   .example-track.example-track-1 {
-    background-color: #007bff; /* Active track between thumbs */
+    background-color: #221d23; /* Active track between thumbs */
   }
   
   .example-track.example-track-2 {
