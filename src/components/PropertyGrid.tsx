@@ -150,8 +150,8 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
               minDistance={50000}
               onChange={handleSliderChange}
               ariaLabel={['Lower thumb', 'Upper thumb']}
-              ariaValuetext={(state) => `Thumb value ${state}`}
-              renderThumb={(props: ThumbProps, state: ThumbState) => (
+              ariaValuetext={(state: ThumbState) => `Thumb value ${state}`}
+              renderThumb={(props: ThumbProps) => (
                 <div {...props}>{}</div>
               )}
             />
