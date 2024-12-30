@@ -6,7 +6,7 @@ import './PropertyCard.css';
 import './Slider.css';
 import ReactSlider from 'react-slider';
 
-type CityOption = 'gdansk' | 'sopot' | 'gdynia' | 'rumia' | 'reda';
+type CityOption = string;
 
 interface PropertyGridProps {
   showFilters?: boolean;

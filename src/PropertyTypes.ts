@@ -7,6 +7,6 @@ export interface Property {
   beds: number;
   baths: number;
   area: number;
-  city: 'gdansk' | 'sopot' | 'gdynia' | 'rumia' | 'reda';
+  city: string;
   primaryMarket: boolean;
 }
