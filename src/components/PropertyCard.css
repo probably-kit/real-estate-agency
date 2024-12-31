@@ -77,8 +77,7 @@
   max-width: 1500px;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  align-self: center;
-  
+  align-self: center; 
 }
 
 .city-filters {
@@ -86,6 +85,7 @@
   gap: 10px;
   margin-bottom: 20px;
   justify-content: center;
+  flex-wrap: nowrap; /* We'll adjust this for mobile below */
 }
 
 .city-button {
@@ -146,6 +146,7 @@
   border-radius: 25px;
   height: 2em;
   text-indent: 1em;
+  width: 100%;
 }
 
 .price-range {
@@ -161,6 +162,7 @@
   padding: 2em;
 }
 
+/* ------------------ MOBILE RESPONSIVENESS ------------------ */
 @media only screen and (max-width: 768px) {
   .property-container {
     padding: 1em;
@@ -197,7 +199,7 @@
 
   .property-price {
     font-size: 1.25rem; 
-  }cd 
+  }
 
   .property-address {
     font-size: 0.9rem;
@@ -214,5 +216,29 @@
 
   .property-info-item span {
     font-size: 0.9rem;
+  }
+
+  /* Adjust city filters so they wrap more naturally on small screens */
+  .city-filters {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Make the filters panel narrower and more mobile-friendly */
+  .filters {
+    width: 95%;
+    margin: 1em 0;
+    padding: 1em;
+    background-color: #fff;
+  }
+
+  .filter-item {
+    width: 95%;
+  }
+
+  .price-range-values {
+    flex-direction: column;
+    padding: 1em 0;
+    gap: 1em;
   }
 }
