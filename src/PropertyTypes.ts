@@ -1,6 +1,7 @@
 export interface Property {
   id: string;
-  imageUrl: string;
+  imageUrl: string;         
+  images?: string[];         
   title: string;
   price: string;
   address: string;
