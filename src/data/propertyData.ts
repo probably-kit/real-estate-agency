@@ -4,6 +4,10 @@ export const propertyData = [
   {
     id: '1',
     imageUrl: 'https://images.pexels.com/photos/2635038/pexels-photo-2635038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    images: [
+      'https://images.pexels.com/photos/2635038/pexels-photo-2635038.jpeg?auto=compress...',
+      'https://images.pexels.com/photos/29908652/pexels-photo-29908652/free-photo-of-charming-lakeside-house-in-lush-sapanca.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    ],
     title: 'Sunnyvale Retreat',
     price: '$450,000',
     address: '23 Sunnyvale Rd',
@@ -16,6 +20,7 @@ export const propertyData = [
   {
     id: '2',
     imageUrl: 'https://images.pexels.com/photos/29908652/pexels-photo-29908652/free-photo-of-charming-lakeside-house-in-lush-sapanca.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    images: [],
     title: 'Mountain View Escape',
     price: '$550,000',
     address: '45 Mountain View Rd',
