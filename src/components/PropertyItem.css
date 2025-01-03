@@ -55,8 +55,18 @@
     display: inline-block;
     background-color: #ff8b00;
     color: #fff;
-    padding: 6px 12px;
-    border-radius: 4px;
-    margin-top: 1rem;
+    border-radius: 30px;
+    display: flex;
+    width: 9em;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    height: 3em;
+
   }
   
+
+  .bottom-container{
+    display: flex;
+    justify-content: space-between;
+  }

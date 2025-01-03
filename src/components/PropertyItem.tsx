@@ -2,6 +2,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Slider from "react-slick";
+import SlideButton from "./SlideButton";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./PropertyItem.css"
 import { useProperties } from "../Contexts/PropertiesContext";
 import { Property } from "../PropertyTypes";
@@ -21,7 +24,7 @@ const PropertyDetails: React.FC = () => {
   const sliderSettings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 400,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -33,10 +36,17 @@ const PropertyDetails: React.FC = () => {
 
   return (
     <div className="property-details-container">
-      <h1 className="property-details-title">{property.title}</h1>
-      
-      {/* Slider */}
-      <div className="property-details-slider">
+      {imagesToShow.length === 1 ? (
+        // Just show the single image without Slick
+        <div className="single-image-container">
+          <img
+            src={imagesToShow[0]}
+            alt={property.title}
+            className="slider-image"
+          />
+        </div>
+      ) : (
+        // Otherwise, show the slider
         <Slider {...sliderSettings}>
           {imagesToShow.map((imgUrl, index) => (
             <div key={index} className="slider-image-container">
@@ -44,7 +54,7 @@ const PropertyDetails: React.FC = () => {
             </div>
           ))}
         </Slider>
-      </div>
+      )}
 
       {/* Detailed Info */}
       <div className="property-details-info">
@@ -58,14 +68,16 @@ const PropertyDetails: React.FC = () => {
         </div>
 
         <p className="property-city">City: {property.city}</p>
-
-        {property.primaryMarket && (
+        <div className="bottom-container">
+          <SlideButton caption="Buy" width="9em" />
+          {property.primaryMarket && (
           <div className="property-badge-primary">
-            Primary Market
+            <span>Primary Market</span>
           </div>
         )}
+        </div>
+        
 
-        {/* Add any extra info you want to show here */}
         {/* <p className="property-description">{property.description}</p> */}
       </div>
     </div>
