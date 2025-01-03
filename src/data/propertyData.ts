@@ -20,7 +20,7 @@ export const propertyData = [
   {
     id: '2',
     imageUrl: 'https://images.pexels.com/photos/29908652/pexels-photo-29908652/free-photo-of-charming-lakeside-house-in-lush-sapanca.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    images: [],
+    images: ['https://images.pexels.com/photos/29908652/pexels-photo-29908652/free-photo-of-charming-lakeside-house-in-lush-sapanca.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1','https://images.pexels.com/photos/2635038/pexels-photo-2635038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'],
     title: 'Mountain View Escape',
     price: '$550,000',
     address: '45 Mountain View Rd',
@@ -33,6 +33,7 @@ export const propertyData = [
   {
     id: '3',
     imageUrl: 'https://images.pexels.com/photos/6045336/pexels-photo-6045336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    images: ['https://images.pexels.com/photos/6045336/pexels-photo-6045336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'],
     title: 'Downtown Delight',
     price: '$600,000',
     address: '789 Downtown St',
