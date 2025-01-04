@@ -12,8 +12,7 @@ import FeaturesSection from './components/FeaturesSection';
 import StandardsGrid from './components/StandardsGrid';
 import ContactSection from './components/ContactSection';
 import PropertyItem from './components/PropertyItem';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+
 
 
 const App: React.FC = () => {
