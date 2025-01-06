@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
+import { BlogProvider } from './Contexts/BlogContext';
 import { PropertiesProvider } from './Contexts/PropertiesContext';
 import PropertyGrid from './components/PropertyGrid';
 import FaqSection from './components/FAQSection';
@@ -12,16 +13,15 @@ import FeaturesSection from './components/FeaturesSection';
 import StandardsGrid from './components/StandardsGrid';
 import ContactSection from './components/ContactSection';
 import PropertyItem from './components/PropertyItem';
-
-
+import BlogList from './components/BlogList';
 
 const App: React.FC = () => {
   return (
     <div className="container">
-    
-        <ScrollToTop />
-        <Navbar />
-        <PropertiesProvider>
+      <ScrollToTop />
+      <Navbar />
+      <PropertiesProvider>
+        <BlogProvider>
           <Routes>
             <Route
               path="/"
@@ -39,11 +39,7 @@ const App: React.FC = () => {
             />
             <Route
               path="/property"
-              element={
-                <>
-                  <PropertyGrid displayCount={Infinity} />
-                </>
-              }
+              element={<PropertyGrid displayCount={Infinity} />}
             />
             <Route path="/property/:id" element={<PropertyItem />} />
             <Route
@@ -56,10 +52,15 @@ const App: React.FC = () => {
                 </>
               }
             />
+            <Route
+              path="/blog"
+              element={<BlogList />}
+            />
+             <Route path="/blog/:id" element={<PropertyItem />} />
           </Routes>
-        </PropertiesProvider>
-        <Footer />
-     
+        </BlogProvider>
+      </PropertiesProvider>
+      <Footer />
     </div>
   );
 };
