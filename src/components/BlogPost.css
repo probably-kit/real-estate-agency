@@ -1,0 +1,37 @@
+.blog-post-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .blog-post-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .blog-post-content {
+    margin-top: 20px;
+  }
+  
+  .blog-post-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .blog-post-author {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .blog-post-text {
+    line-height: 1.6;
+  }
+  
+  .blog-post-list {
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  

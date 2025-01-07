@@ -14,6 +14,7 @@ import StandardsGrid from './components/StandardsGrid';
 import ContactSection from './components/ContactSection';
 import PropertyItem from './components/PropertyItem';
 import BlogList from './components/BlogList';
+import BlogPostPage from './components/BlogPost';
 
 const App: React.FC = () => {
   return (
@@ -56,7 +57,7 @@ const App: React.FC = () => {
               path="/blog"
               element={<BlogList />}
             />
-             <Route path="/blog/:id" element={<PropertyItem />} />
+             <Route path="/blog/:id" element={<BlogPostPage />} />
           </Routes>
         </BlogProvider>
       </PropertiesProvider>

@@ -2,7 +2,6 @@ import React from 'react';
 import './BlogCard.css';
 
 type BlogCardProps = {
-  id: string;
   title: string;
   author: string;
   date: string;
@@ -12,7 +11,6 @@ type BlogCardProps = {
 };
 
 const BlogCard: React.FC<BlogCardProps> = ({
-  id,
   title,
   author,
   date,
