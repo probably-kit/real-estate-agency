@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
+import ScrollPosition from './components/ScrollPosition';
 import { BlogProvider } from './Contexts/BlogContext';
 import { PropertiesProvider } from './Contexts/PropertiesContext';
 import PropertyGrid from './components/PropertyGrid';
@@ -19,7 +19,7 @@ import BlogPostPage from './components/BlogPost';
 const App: React.FC = () => {
   return (
     <div className="container">
-      <ScrollToTop />
+      <ScrollPosition />
       <Navbar />
       <PropertiesProvider>
         <BlogProvider>
