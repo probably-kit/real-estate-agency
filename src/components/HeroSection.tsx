@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './HeroSection.css';
 
 const HeroSection: React.FC = () => {
@@ -12,9 +13,7 @@ const HeroSection: React.FC = () => {
             Where Dreams Become Apartments. <br /> Transforming Visions into Vibrant Living Spaces.
           </p>
           <div className="hero-buttons">
-            <a href="#" className="transparent-btn">
-              Explore Projects
-            </a>
+            <Link className="transparent-btn" to="/property">Explore Projects</Link>
             {/* <a href="#" className="btn">
               Our Process
             </a> */}

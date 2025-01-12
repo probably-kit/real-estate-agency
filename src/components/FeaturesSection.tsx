@@ -13,7 +13,7 @@ const FeaturesSection: React.FC = () => {
             We support our clients at every stage of the buying and selling process, ensuring a seamless and stress-free experience from start to finish.
           </p>
           <br />
-          <SlideButton caption='Learn More'/>
+          <SlideButton link='/property' caption='Learn More'/>
         </div>
       </div>
       <div className="right-section">
