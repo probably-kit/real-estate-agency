@@ -1,0 +1,65 @@
+.language-switcher {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .language-switcher-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: #fff; /* or transparent */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+  
+  .language-flag {
+    width: 20px;
+    height: 14px;
+    margin-right: 8px;
+    object-fit: cover;
+  }
+  
+  .language-label {
+    margin-right: 6px;
+  }
+  
+  .language-arrow {
+    font-size: 12px;
+    margin-left: auto;
+  }
+  
+  .language-dropdown-menu {
+    position: absolute;
+    top: 42px; /* Adjust to space the menu correctly below the button */
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 120px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+  
+  .language-dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    cursor: pointer;
+  }
+  
+  .language-dropdown-item:hover {
+    background: #f1f1f1;
+  }
+  
+  .language-dropdown-label {
+    margin-left: 6px;
+  }
+  
+  .language-checkmark {
+    margin-left: auto;
+    color: green;
+    font-size: 14px;
+  }
+  

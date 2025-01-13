@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import "./Navbar.css";
 import SlideButton from './SlideButton';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher'; // <-- import
 
 const Navbar: React.FC = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
@@ -25,7 +28,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="logo">WERNER HOME</div>
+      <div className="logo">{t('navbar.logo')}</div>
       
       {/* Hamburger icon (visible only on small screens) */}
       <button className="hamburger" onClick={toggleMenu}>
@@ -38,14 +41,21 @@ const Navbar: React.FC = () => {
       </button>
 
       <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About Us</Link>
-        <Link to="/property">Property</Link>
-        <Link to="/blog">Blogs</Link>
+        <Link to="/">{t('navbar.links.home')}</Link>
+        <Link to="/about">{t('navbar.links.aboutUs')}</Link>
+        <Link to="/property">{t('navbar.links.property')}</Link>
+        <Link to="/blog">{t('navbar.links.blogs')}</Link>
       </div>
+      
+     
+      
+
       <div className='slide-button-container'>
-      <SlideButton />
+      
+        <SlideButton />
       </div>
+
+      <LanguageSwitcher />
     </nav>
   );
 };

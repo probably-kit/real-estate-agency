@@ -1,0 +1,18 @@
+{
+    "navbar": {
+      "logo": "WERNER HOME",
+      "links": {
+        "home": "Home",
+        "aboutUs": "About Us",
+        "property": "Property",
+        "blogs": "Blogs"
+      },
+      "language": "Language",
+      "languages": {
+        "en": "English",
+        "pl": "Polski",
+        "ru": "Русский"
+      }
+    }
+  }
+  
