@@ -1,18 +1,59 @@
 {
-    "navbar": {
-      "logo": "WERNER HOME",
-      "links": {
-        "home": "Strona Główna",
-        "aboutUs": "O Nas",
-        "property": "Nieruchomości",
-        "blogs": "Blogi"
+  "navbar": {
+    "logo": "WERNER DOM",
+    "links": {
+      "home": "Strona Główna",
+      "aboutUs": "O Nas",
+      "property": "Nieruchomości",
+      "blogs": "Blogi"
+    },
+    "language": "Język",
+    "languages": {
+      "en": "English",
+      "pl": "Polski",
+      "ru": "Русский"
+    }
+  },
+  "heroSection": {
+    "title": "Projektowanie Twojego Następnego Rozdziału.",
+    "description": "Gdzie Marzenia Stają się Apartamentami. <br /> Przekształcanie Wizji w Żywe Przestrzenie Mieszkalne.",
+    "buttons": {
+      "exploreProjects": "Odkryj Projekty"
+    },
+    "feedback": {
+      "details": "50k+ Zadowolonych Klientów",
+      "clients": {
+        "client1": "Klient 1",
+        "client2": "Klient 2",
+        "client3": "Klient 3"
       },
-      "language": "Język",
-      "languages": {
-        "en": "English",
-        "pl": "Polski",
-        "ru": "Русский"
+      "alt": {
+        "building": "Budowla",
+        "client1": "Klient 1",
+        "client2": "Klient 2",
+        "client3": "Klient 3"
       }
     }
+  },
+  "faqSection": {
+    "title": "Najczęściej Zadawane Pytania",
+    "faqs": [
+      {
+        "question": "Jakie usługi oferujecie dla klientów nieruchomości?",
+        "answer": "Oferujemy kompleksowe usługi, w tym analizę rynku, wycenę nieruchomości, dostosowane strategie marketingowe oraz pomoc w dokumentacji prawnej, aby zapewnić płynny proces kupna lub sprzedaży."
+      },
+      {
+        "question": "Jak mogę rozpocząć korzystanie z waszych usług?",
+        "answer": "Skontaktuj się z nami poprzez e-mail lub telefon, aby umówić konsultację. Omówimy twoje potrzeby i przedstawimy kolejne kroki."
+      },
+      {
+        "question": "Jak pomagacie w dokumentacji prawnej?",
+        "answer": "Nasz zespół pomoże Ci przygotować i przejrzeć wszystkie niezbędne dokumenty prawne, zapewniając zgodność z lokalnymi przepisami."
+      },
+      {
+        "question": "Czy możecie pomóc mi znaleźć odpowiednią nieruchomość?",
+        "answer": "Oczywiście! Mamy dostęp do szerokiej sieci nieruchomości i pomożemy Ci znaleźć tę, która najlepiej odpowiada Twoim potrzebom i budżetowi."
+      }
+    ]
   }
-  
+}

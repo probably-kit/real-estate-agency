@@ -8,8 +8,8 @@
     align-items: center;
     cursor: pointer;
     background: #fff; /* or transparent */
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 0px solid #ccc;
+    border-radius: 25px;
     padding: 6px 8px;
     font-size: 14px;
   }
@@ -35,8 +35,8 @@
     top: 42px; /* Adjust to space the menu correctly below the button */
     left: 0;
     background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
     min-width: 120px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     z-index: 999;
@@ -51,6 +51,7 @@
   
   .language-dropdown-item:hover {
     background: #f1f1f1;
+    border-radius: 10px;
   }
   
   .language-dropdown-label {

@@ -5,13 +5,13 @@ import './LanguageSwitcher.css';
 type LanguageItem = {
   code: string;
   label: string;
-  flag: string; // Path to your flag images
+  flag?: string; // Path to your flag images
 };
 
 const languages: LanguageItem[] = [
-  { code: 'en', label: 'English', flag: '/flags/en.png' },
-  { code: 'pl', label: 'Polski',  flag: '/flags/pl.png' },
-  { code: 'ru', label: 'Русский', flag: '/flags/ru.png' },
+  { code: 'en', label: 'EN', flag: '/flags/en.png' },
+  { code: 'pl', label: 'PL',  flag: '/flags/pl.png' },
+  { code: 'ru', label: 'RU', flag: '/flags/ru.png' },
 ];
 
 const LanguageSwitcher: React.FC = () => {
@@ -39,11 +39,11 @@ const LanguageSwitcher: React.FC = () => {
     <div className="language-switcher">
       {/* “Button” that shows current language + flag */}
       <button onClick={toggleDropdown} className="language-switcher-btn">
-        <img 
+        {/* <img 
           src={currentLanguageItem.flag} 
           alt={currentLanguageItem.label} 
           className="language-flag"
-        />
+        /> */}
         <span className="language-label">{currentLanguageItem.label}</span>
         <span className="language-arrow">{isOpen ? '▲' : '▼'}</span>
       </button>
@@ -57,11 +57,11 @@ const LanguageSwitcher: React.FC = () => {
               className="language-dropdown-item"
               onClick={() => handleLanguageChange(lng.code)}
             >
-              <img 
+              {/* <img 
                 src={lng.flag} 
                 alt={lng.label} 
                 className="language-flag"
-              />
+              /> */}
               <span className="language-dropdown-label">
                 {lng.label}
               </span>

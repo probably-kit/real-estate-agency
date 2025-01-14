@@ -45,6 +45,7 @@ const Navbar: React.FC = () => {
         <Link to="/about">{t('navbar.links.aboutUs')}</Link>
         <Link to="/property">{t('navbar.links.property')}</Link>
         <Link to="/blog">{t('navbar.links.blogs')}</Link>
+        <LanguageSwitcher />
       </div>
       
      
@@ -54,8 +55,8 @@ const Navbar: React.FC = () => {
       
         <SlideButton />
       </div>
-
-      <LanguageSwitcher />
+      
+      
     </nav>
   );
 };

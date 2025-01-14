@@ -1,18 +1,59 @@
 {
-    "navbar": {
-      "logo": "WERNER HOME",
-      "links": {
-        "home": "Home",
-        "aboutUs": "About Us",
-        "property": "Property",
-        "blogs": "Blogs"
+  "navbar": {
+    "logo": "WERNER HOME",
+    "links": {
+      "home": "Home",
+      "aboutUs": "About Us",
+      "property": "Property",
+      "blogs": "Blogs"
+    },
+    "language": "Language",
+    "languages": {
+      "en": "English",
+      "pl": "Polski",
+      "ru": "Русский"
+    }
+  },
+  "heroSection": {
+    "title": "Designing Your Next Chapter.",
+    "description": "Where Dreams Become Apartments. <br /> Transforming Visions into Vibrant Living Spaces.",
+    "buttons": {
+      "exploreProjects": "Explore Projects"
+    },
+    "feedback": {
+      "details": "50k+ Happy Clients",
+      "clients": {
+        "client1": "Client 1",
+        "client2": "Client 2",
+        "client3": "Client 3"
       },
-      "language": "Language",
-      "languages": {
-        "en": "English",
-        "pl": "Polski",
-        "ru": "Русский"
+      "alt": {
+        "building": "Building",
+        "client1": "Client 1",
+        "client2": "Client 2",
+        "client3": "Client 3"
       }
     }
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "What services do you offer for real estate clients?",
+        "answer": "We provide comprehensive services, including market analysis, property valuation, tailored marketing strategies, and legal documentation assistance to ensure a smooth buying or selling process."
+      },
+      {
+        "question": "How can I get started with your services?",
+        "answer": "Contact us via email or phone to schedule a consultation. We'll discuss your needs and provide the next steps."
+      },
+      {
+        "question": "How do you assist with legal documentation?",
+        "answer": "Our team will help you prepare and review all necessary legal documents, ensuring compliance with local regulations."
+      },
+      {
+        "question": "Can you help me find the right property?",
+        "answer": "Absolutely! We have access to a wide network of properties and will help you find the one that best suits your needs and budget."
+      }
+    ]
   }
-  
+}
