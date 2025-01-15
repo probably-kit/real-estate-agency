@@ -1,38 +1,37 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import SlideButton from './SlideButton';
 import './FeaturesSection.css';
 
+type InfoCard = {
+  title: string;
+  description: string;
+};
+
 const FeaturesSection: React.FC = () => {
+  const { t } = useTranslation();
+  const infoCards: InfoCard[] = t('featuresSection.infoCards', { returnObjects: true }) as InfoCard[];
+
   return (
     <section className="features-container">
       <div className="left-section">
-        <img src="/forest home.webp" alt="Property Image" />
+        <img src="/forest home.webp" alt={t('featuresSection.alt.propertyImage')} />
         <div>
-          <h2>Find Your Dream Property At The Best Price</h2>
+          <h2>{t('featuresSection.title')}</h2>
           <p>
-            We support our clients at every stage of the buying and selling process, ensuring a seamless and stress-free experience from start to finish.
+            {t('featuresSection.description')}
           </p>
           <br />
-          <SlideButton link='/property' caption='Learn More'/>
+          <SlideButton link="/property" caption={t('featuresSection.buttons.learnMore')} />
         </div>
       </div>
       <div className="right-section">
-        <div className="info-card">
-          <h3>100k+</h3>
-          <p>Property Constructed</p>
-        </div>
-        <div className="info-card">
-          <h3>100+</h3>
-          <p>Award Winning</p>
-        </div>
-        <div className="info-card">
-          <h3>50k+</h3>
-          <p>Satisfied Clients</p>
-        </div>
-        <div className="info-card">
-          <h3>5+</h3>
-          <p>Years of Experience</p>
-        </div>
+        {infoCards.map((card, index) => (
+          <div className="info-card" key={index}>
+            <h3>{card.title}</h3>
+            <p>{card.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "logo": "WERNER DOM",
+    "logo": "WERNER HOME",
     "links": {
       "home": "Strona Główna",
       "aboutUs": "O Nas",
@@ -55,5 +55,33 @@
         "answer": "Oczywiście! Mamy dostęp do szerokiej sieci nieruchomości i pomożemy Ci znaleźć tę, która najlepiej odpowiada Twoim potrzebom i budżetowi."
       }
     ]
+  },
+  "featuresSection": {
+    "title": "Znajdź Swoją Wymarzoną Nieruchomość w Najlepszej Cenie",
+    "description": "Wspieramy naszych klientów na każdym etapie procesu kupna i sprzedaży, zapewniając bezproblemowe i bezstresowe doświadczenie od początku do końca.",
+    "buttons": {
+      "learnMore": "Dowiedz się więcej"
+    },
+    "infoCards": [
+      {
+        "title": "100k+",
+        "description": "Zbudowanych Nieruchomości"
+      },
+      {
+        "title": "100+",
+        "description": "Nagrodzonych"
+      },
+      {
+        "title": "50k+",
+        "description": "Zadowolonych Klientów"
+      },
+      {
+        "title": "5+",
+        "description": "Lat Doświadczenia"
+      }
+    ],
+    "alt": {
+      "propertyImage": "Obraz Nieruchomości"
+    }
   }
 }

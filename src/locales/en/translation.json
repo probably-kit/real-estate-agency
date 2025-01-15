@@ -55,5 +55,33 @@
         "answer": "Absolutely! We have access to a wide network of properties and will help you find the one that best suits your needs and budget."
       }
     ]
+  },
+  "featuresSection": {
+    "title": "Find Your Dream Property At The Best Price",
+    "description": "We support our clients at every stage of the buying and selling process, ensuring a seamless and stress-free experience from start to finish.",
+    "buttons": {
+      "learnMore": "Learn More"
+    },
+    "infoCards": [
+      {
+        "title": "100k+",
+        "description": "Property Constructed"
+      },
+      {
+        "title": "100+",
+        "description": "Award Winning"
+      },
+      {
+        "title": "50k+",
+        "description": "Satisfied Clients"
+      },
+      {
+        "title": "5+",
+        "description": "Years of Experience"
+      }
+    ],
+    "alt": {
+      "propertyImage": "Property Image"
+    }
   }
 }

@@ -29,7 +29,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ id, onClick }) => {
         <div className="property-info">
           <PropertyInfo icon="home" label={`${beds} Beds`} />
           <PropertyInfo icon="bathroom" label={`${baths} Baths`} />
-          <PropertyInfo icon="area" label={`${area} sq.ft`} />
+          <PropertyInfo icon="area" label={`${area} m²`} />
         </div>
       </div>
     </div>
