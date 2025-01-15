@@ -1,87 +1,122 @@
 {
   "navbar": {
-    "logo": "WERNER HOME",
-    "links": {
-      "home": "Strona Główna",
-      "aboutUs": "O Nas",
-      "property": "Nieruchomości",
-      "blogs": "Blogi"
-    },
-    "language": "Język",
-    "languages": {
-      "en": "English",
-      "pl": "Polski",
-      "ru": "Русский"
-    }
+      "logo": "WERNER HOME",
+      "links": {
+          "home": "Strona Główna",
+          "aboutUs": "O Nas",
+          "property": "Nieruchomości",
+          "blogs": "Blogi"
+      },
+      "language": "Język",
+      "languages": {
+          "en": "English",
+          "pl": "Polski",
+          "ru": "Русский"
+      }
   },
   "heroSection": {
-    "title": "Projektowanie Twojego Następnego Rozdziału.",
-    "description": "Gdzie Marzenia Stają się Apartamentami. <br /> Przekształcanie Wizji w Żywe Przestrzenie Mieszkalne.",
-    "buttons": {
-      "exploreProjects": "Odkryj Projekty"
-    },
-    "feedback": {
-      "details": "50k+ Zadowolonych Klientów",
-      "clients": {
-        "client1": "Klient 1",
-        "client2": "Klient 2",
-        "client3": "Klient 3"
+      "title": "Projektowanie Twojego Następnego Rozdziału.",
+      "description": "Gdzie Marzenia Stają się Apartamentami. <br /> Przekształcanie Wizji w Żywe Przestrzenie Mieszkalne.",
+      "buttons": {
+          "exploreProjects": "Odkryj Projekty"
       },
-      "alt": {
-        "building": "Budowla",
-        "client1": "Klient 1",
-        "client2": "Klient 2",
-        "client3": "Klient 3"
+      "feedback": {
+          "details": "50k+ Zadowolonych Klientów",
+          "clients": {
+              "client1": "Klient 1",
+              "client2": "Klient 2",
+              "client3": "Klient 3"
+          },
+          "alt": {
+              "building": "Budowla",
+              "client1": "Klient 1",
+              "client2": "Klient 2",
+              "client3": "Klient 3"
+          }
       }
-    }
   },
   "faqSection": {
-    "title": "Najczęściej Zadawane Pytania",
-    "faqs": [
-      {
-        "question": "Jakie usługi oferujecie dla klientów nieruchomości?",
-        "answer": "Oferujemy kompleksowe usługi, w tym analizę rynku, wycenę nieruchomości, dostosowane strategie marketingowe oraz pomoc w dokumentacji prawnej, aby zapewnić płynny proces kupna lub sprzedaży."
-      },
-      {
-        "question": "Jak mogę rozpocząć korzystanie z waszych usług?",
-        "answer": "Skontaktuj się z nami poprzez e-mail lub telefon, aby umówić konsultację. Omówimy twoje potrzeby i przedstawimy kolejne kroki."
-      },
-      {
-        "question": "Jak pomagacie w dokumentacji prawnej?",
-        "answer": "Nasz zespół pomoże Ci przygotować i przejrzeć wszystkie niezbędne dokumenty prawne, zapewniając zgodność z lokalnymi przepisami."
-      },
-      {
-        "question": "Czy możecie pomóc mi znaleźć odpowiednią nieruchomość?",
-        "answer": "Oczywiście! Mamy dostęp do szerokiej sieci nieruchomości i pomożemy Ci znaleźć tę, która najlepiej odpowiada Twoim potrzebom i budżetowi."
-      }
-    ]
+      "title": "Najczęściej Zadawane Pytania",
+      "faqs": [
+          {
+              "question": "Jakie usługi oferujecie dla klientów nieruchomości?",
+              "answer": "Oferujemy kompleksowe usługi, w tym analizę rynku, wycenę nieruchomości, dostosowane strategie marketingowe oraz pomoc w dokumentacji prawnej, aby zapewnić płynny proces kupna lub sprzedaży."
+          },
+          {
+              "question": "Jak mogę rozpocząć korzystanie z waszych usług?",
+              "answer": "Skontaktuj się z nami poprzez e-mail lub telefon, aby umówić konsultację. Omówimy twoje potrzeby i przedstawimy kolejne kroki."
+          },
+          {
+              "question": "Jak pomagacie w dokumentacji prawnej?",
+              "answer": "Nasz zespół pomoże Ci przygotować i przejrzeć wszystkie niezbędne dokumenty prawne, zapewniając zgodność z lokalnymi przepisami."
+          },
+          {
+              "question": "Czy możecie pomóc mi znaleźć odpowiednią nieruchomość?",
+              "answer": "Oczywiście! Mamy dostęp do szerokiej sieci nieruchomości i pomożemy Ci znaleźć tę, która najlepiej odpowiada Twoim potrzebom i budżetowi."
+          }
+      ]
   },
   "featuresSection": {
-    "title": "Znajdź Swoją Wymarzoną Nieruchomość w Najlepszej Cenie",
-    "description": "Wspieramy naszych klientów na każdym etapie procesu kupna i sprzedaży, zapewniając bezproblemowe i bezstresowe doświadczenie od początku do końca.",
-    "buttons": {
-      "learnMore": "Dowiedz się więcej"
-    },
-    "infoCards": [
-      {
-        "title": "100k+",
-        "description": "Zbudowanych Nieruchomości"
+      "title": "Znajdź Swoją Wymarzoną Nieruchomość w Najlepszej Cenie",
+      "description": "Wspieramy naszych klientów na każdym etapie procesu kupna i sprzedaży, zapewniając bezproblemowe i bezstresowe doświadczenie od początku do końca.",
+      "buttons": {
+          "learnMore": "Dowiedz się więcej"
       },
-      {
-        "title": "100+",
-        "description": "Nagrodzonych"
-      },
-      {
-        "title": "50k+",
-        "description": "Zadowolonych Klientów"
-      },
-      {
-        "title": "5+",
-        "description": "Lat Doświadczenia"
+      "infoCards": [
+          {
+              "title": "100k+",
+              "description": "Zbudowanych Nieruchomości"
+          },
+          {
+              "title": "100+",
+              "description": "Nagrodzonych"
+          },
+          {
+              "title": "50k+",
+              "description": "Zadowolonych Klientów"
+          },
+          {
+              "title": "5+",
+              "description": "Lat Doświadczenia"
+          }
+      ],
+      "alt": {
+          "propertyImage": "Obraz Nieruchomości"
       }
-    ],
-    "alt": {
-      "propertyImage": "Obraz Nieruchomości"
-    }
+  },
+  "standards": {
+      "title": "Najważniejsze Standardy Naszej Pracy",
+      "cards": {
+          "marketAnalysis": {
+              "title": "Analiza Rynku",
+              "description": "Dogłębne zrozumienie trendów rynkowych w celu wyznaczania cen i strategii."
+          },
+          "propertyValuation": {
+              "title": "Wycena Nieruchomości",
+              "description": "Dokładne oceny w celu określenia prawdziwej wartości ulubionego mieszkania, domku itp."
+          },
+          "legalAssistance": {
+              "title": "Pomoc Prawna",
+              "description": "Pomoc klientom w zrozumieniu zawiłości dokumentacji prawnej, zapewniając płynność transakcji."
+          },
+          "postSaleSupport": {
+              "title": "Wsparcie Po Sprzedaży",
+              "description": "Zapewnienie wsparcia również po sprzedaży, dbając o komfort klientów na każdym etapie."
+          },
+          "negotiationSkills": {
+              "title": "Umiejętności Negocjacyjne",
+              "description": "Mistrzowskie negocjacje w celu uzyskania najlepszych ofert dla naszych klientów."
+          },
+          "marketingPlans": {
+              "title": "Indywidualne Plany Marketingowe",
+              "description": "Tworzenie dostosowanych strategii prezentowania nieruchomości i przyciągania kupujących."
+          }
+      }
+  },
+  "contactSection": {
+    "title": "Co sprawia, że jesteśmy Twoim idealnym partnerem nieruchomości?",
+    "description": "Nasz doświadczony zespół zapewnia zaufaną wiedzę, aby podejmować świadome decyzje dotyczące nieruchomości, oferując dostosowane wsparcie do Twoich unikalnych potrzeb i wykazując sprawdzony sukces dzięki silnej historii satysfakcji klientów.",
+    "buttonCaption": "Skontaktuj się z nami",
+    "imageAlt": "Dom"
   }
 }

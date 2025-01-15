@@ -83,5 +83,40 @@
     "alt": {
       "propertyImage": "Property Image"
     }
+  },
+  "standards": {
+    "title": "Highlights of Our Work Standards",
+    "cards": {
+      "marketAnalysis": {
+        "title": "Market Analysis",
+        "description": "In-depth understanding of market trends to guide pricing and strategy."
+      },
+      "propertyValuation": {
+        "title": "Property Valuation",
+        "description": "Accurate assessments to determine the true value of your favorite apartment, cottage, etc."
+      },
+      "legalAssistance": {
+        "title": "Legal Assistance",
+        "description": "Helping clients navigate the complexities of legal paperwork to ensure a smooth transaction."
+      },
+      "postSaleSupport": {
+        "title": "Post-Sale Support",
+        "description": "Providing assistance even after the sale, ensuring clients feel supported throughout their journey."
+      },
+      "negotiationSkills": {
+        "title": "Negotiation Skills",
+        "description": "Mastering negotiations to secure the best deals for our clients."
+      },
+      "marketingPlans": {
+        "title": "Tailored Marketing Plans",
+        "description": "Developing customized strategies to showcase properties and attract buyers."
+      }
+    }
+  },
+  "contactSection": {
+    "title": "What Makes Us Your Ideal Real Estate Partner?",
+    "description": "Our knowledgeable team provides trusted expertise for informed real estate decisions, offering tailored support to meet your unique needs and demonstrating proven success through a strong track record of client satisfaction.",
+    "buttonCaption": "Contact Us",
+    "imageAlt": "House"
   }
 }

@@ -1,44 +1,46 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './StandardsGrid.css';
 
 const StandardsGrid: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className='standards-container'>
-      <h1 className='standards-h1'>Highlights of Our Work Standards</h1>
+      <h1 className='standards-h1'>{t('standards.title')}</h1>
       <section className="standards-grid">
         <div className="standards-grid-card">
-          <img src="/stats-chart-svgrepo-com.svg" alt="Market Analysis Icon" />
-          <h3>Market Analysis</h3>
-          <p>In-depth understanding of market trends to guide pricing and strategy.</p>
+          <img src="/stats-chart-svgrepo-com.svg" alt={t('standards.cards.marketAnalysis.title')} />
+          <h3>{t('standards.cards.marketAnalysis.title')}</h3>
+          <p>{t('standards.cards.marketAnalysis.description')}</p>
         </div>
         <div className="standards-grid-card">
-          <img src="/house-lock-svgrepo-com.svg" alt="Property Valuation Icon" />
-          <h3>Property Valuation</h3>
-          <p>Accurate assessments to determine the true value of your favorite apartment, cottage, etc.</p>
+          <img src="/house-lock-svgrepo-com.svg" alt={t('standards.cards.propertyValuation.title')} />
+          <h3>{t('standards.cards.propertyValuation.title')}</h3>
+          <p>{t('standards.cards.propertyValuation.description')}</p>
         </div>
         <div className="standards-grid-card">
-          <img src="/file-check-svgrepo-com.svg" alt="Legal Assistance Icon" />
-          <h3>Legal Assistance</h3>
-          <p>Helping clients navigate the complexities of legal paperwork to ensure a smooth transaction.</p>
+          <img src="/file-check-svgrepo-com.svg" alt={t('standards.cards.legalAssistance.title')} />
+          <h3>{t('standards.cards.legalAssistance.title')}</h3>
+          <p>{t('standards.cards.legalAssistance.description')}</p>
         </div>
         <div className="standards-grid-card">
-          <img src="/support-svgrepo-com.svg" alt="Post-Sale Support Icon" />
-          <h3>Post-Sale Support</h3>
-          <p>Providing assistance even after the sale, ensuring clients feel supported throughout their journey.</p>
+          <img src="/support-svgrepo-com.svg" alt={t('standards.cards.postSaleSupport.title')} />
+          <h3>{t('standards.cards.postSaleSupport.title')}</h3>
+          <p>{t('standards.cards.postSaleSupport.description')}</p>
         </div>
         <div className="standards-grid-card">
-          <img src="/message-text-1-svgrepo-com.svg" alt="Negotiation Skills Icon" />
-          <h3>Negotiation Skills</h3>
-          <p>In-depth understanding of market trends to guide pricing and strategy.</p>
+          <img src="/message-text-1-svgrepo-com.svg" alt={t('standards.cards.negotiationSkills.title')} />
+          <h3>{t('standards.cards.negotiationSkills.title')}</h3>
+          <p>{t('standards.cards.negotiationSkills.description')}</p>
         </div>
         <div className="standards-grid-card">
-          <img src="/target-bold-svgrepo-com.svg" alt="Tailored Marketing Plans Icon" />
-          <h3>Tailored Marketing Plans</h3>
-          <p>Developing customized strategies to showcase properties and attract buyers.</p>
+          <img src="/target-bold-svgrepo-com.svg" alt={t('standards.cards.marketingPlans.title')} />
+          <h3>{t('standards.cards.marketingPlans.title')}</h3>
+          <p>{t('standards.cards.marketingPlans.description')}</p>
         </div>
       </section>
     </div>
-
   );
 };
 
