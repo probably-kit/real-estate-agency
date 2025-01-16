@@ -118,5 +118,30 @@
     "description": "Nasz doświadczony zespół zapewnia zaufaną wiedzę, aby podejmować świadome decyzje dotyczące nieruchomości, oferując dostosowane wsparcie do Twoich unikalnych potrzeb i wykazując sprawdzony sukces dzięki silnej historii satysfakcji klientów.",
     "buttonCaption": "Skontaktuj się z nami",
     "imageAlt": "Dom"
+  },
+  "footer": {
+    "title": "WernerHome",
+    "description": "Gdzie Twoje Wymarzone Miejsce Staje się Rzeczywistością. Budując Przyszłość, Jedna Nieruchomość na Raz.",
+    "explore": {
+      "heading": "Odkryj",
+      "links": ["Kup", "Wynajmij", "Krótkoterminowo", "Nowe Projekty", "Dodaj swoją nieruchomość"]
+    },
+    "services": {
+      "heading": "Usługi",
+      "links": ["Zarządzanie Nieruchomościami", "Wycena Nieruchomości", "Wymiana Nieruchomości", "Umowy Prawne"]
+    },
+    "quickLinks": {
+      "heading": "Szybkie Linki",
+      "links": ["Blogi", "FAQ", "Opinie"]
+    },
+    "bottom": {
+      "copyright": "© 2024 WernerHome. Wszelkie prawa zastrzeżone",
+      "policies": ["Polityka Prywatności", "Mapa Krajów", "Polityka Cookie"]
+    },
+    "subscription": {
+      "label": "Szukasz domu?",
+      "placeholder": "Adres e-mail",
+      "button": "Wyślij"
+    }
   }
 }

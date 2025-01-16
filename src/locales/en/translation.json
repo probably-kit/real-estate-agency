@@ -118,5 +118,30 @@
     "description": "Our knowledgeable team provides trusted expertise for informed real estate decisions, offering tailored support to meet your unique needs and demonstrating proven success through a strong track record of client satisfaction.",
     "buttonCaption": "Contact Us",
     "imageAlt": "House"
+  },
+  "footer": {
+    "title": "WernerHome",
+    "description": "Where Your Dream Space Becomes Reality. Building Futures, One Property at a Time.",
+    "explore": {
+      "heading": "Explore",
+      "links": ["Buy", "Rent", "Short Term", "New Projects", "List Your Property"]
+    },
+    "services": {
+      "heading": "Services",
+      "links": ["Property Management", "Property Valuation", "Property Exchange", "Legal Agreements"]
+    },
+    "quickLinks": {
+      "heading": "Quick Links",
+      "links": ["Blogs", "FAQ", "Reviews"]
+    },
+    "bottom": {
+      "copyright": "© 2024 WernerHome. All rights reserved",
+      "policies": ["Privacy Policy", "Country Sitemap", "Cookie Policy"]
+    },
+    "subscription": {
+      "label": "Are you finding a home?",
+      "placeholder": "Email address",
+      "button": "Submit"
+    }
   }
 }

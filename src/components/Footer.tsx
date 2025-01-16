@@ -1,62 +1,62 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './Footer.css';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="footer-container grid-cols">
         <div>
-          <h1 className="footer-title">WernerHome</h1>
-          <p className="footer-description">Where Your Dream Space Becomes Reality. Building Futures, One Property at a Time.</p>
+          <h1 className="footer-title">{t('footer.title')}</h1>
+          <p className="footer-description">{t('footer.description')}</p>
         </div>
         <div>
-          <h3 className="footer-heading">Explore</h3>
+          <h3 className="footer-heading">{t('footer.explore.heading')}</h3>
           <ul className="footer-links">
-            <li><a href="#">Buy</a></li>
-            <li><a href="#">Rent</a></li>
-            <li><a href="#">Short Term</a></li>
-            <li><a href="#">New Projects</a></li>
-            <li><a href="#">List Your Property</a></li>
+            {(t('footer.explore.links', { returnObjects: true }) as string[]).map((link, index) => (
+              <li key={index}><a href="#">{link}</a></li>
+            ))}
           </ul>
         </div>
         <div>
-          <h3 className="footer-heading">Services</h3>
+          <h3 className="footer-heading">{t('footer.services.heading')}</h3>
           <ul className="footer-links">
-            <li><a href="#">Property Management</a></li>
-            <li><a href="#">Property Valuation</a></li>
-            <li><a href="#">Property Exchange</a></li>
-            <li><a href="#">Legal Agreements</a></li>
+            {(t('footer.services.links', { returnObjects: true }) as string[]).map((link, index) => (
+              <li key={index}><a href="#">{link}</a></li>
+            ))}
           </ul>
         </div>
         <div>
-          <h3 className="footer-heading">Quick Links</h3>
+          <h3 className="footer-heading">{t('footer.quickLinks.heading')}</h3>
           <ul className="footer-links">
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Reviews</a></li>
+            {(t('footer.quickLinks.links', { returnObjects: true }) as string[]).map((link, index) => (
+              <li key={index}><a href="#">{link}</a></li>
+            ))}
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
         <div className="footer-copyright">
-          <p>&copy; 2024 WernerHome. All rights reserved</p>
+          <p>{t('footer.bottom.copyright')}</p>
         </div>
         <div className="footer-policies">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Country Sitemap</a>
-          <a href="#">Cookie Policy</a>
+          {(t('footer.bottom.policies', { returnObjects: true }) as string[]).map((policy, index) => (
+            <a key={index} href="#">{policy}</a>
+          ))}
         </div>
       </div>
       <div className="footer-subscription">
         <form className="subscription-form">
-          <label htmlFor="email" className="subscription-label">Are you finding a home?</label>
+          <label htmlFor="email" className="subscription-label">{t('footer.subscription.label')}</label>
           <input
             type="email"
             id="email"
-            placeholder="Email address"
+            placeholder={t('footer.subscription.placeholder')}
             className="subscription-input"
           />
-          <button className="subscription-button">Submit</button>
+          <button className="subscription-button">{t('footer.subscription.button')}</button>
         </form>
       </div>
     </footer>
