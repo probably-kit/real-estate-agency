@@ -143,5 +143,17 @@
       "placeholder": "Adres e-mail",
       "button": "Wyślij"
     }
+  }, "propertyGrid": {
+    "heading": "Odkryj Nasze Najlepsze Nieruchomości",
+    "filters": {
+      "searchLabel": "Szukaj według tytułu:",
+      "searchPlaceholder": "np. Sunnyvale...",
+      "priceRangeLabel": "Zakres cen:",
+      "minPrice": "Min:",
+      "maxPrice": "Max:",
+      "primaryMarket": "Rynek Pierwotny"
+    },
+    "cities": ["Gdańsk", "Sopot", "Gdynia", "Rumia", "Reda"],
+    "noProperties": "Żadne nieruchomości nie pasują do Twoich filtrów."
   }
 }

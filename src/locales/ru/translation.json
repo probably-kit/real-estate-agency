@@ -143,5 +143,17 @@
       "placeholder": "Электронная почта",
       "button": "Отправить"
     }
+  },"propertyGrid": {
+    "heading": "Исследуйте Наши Лучшие Объекты",
+    "filters": {
+      "searchLabel": "Поиск по названию:",
+      "searchPlaceholder": "например, Sunnyvale...",
+      "priceRangeLabel": "Ценовой Диапазон:",
+      "minPrice": "Мин:",
+      "maxPrice": "Макс:",
+      "primaryMarket": "Первичный Рынок"
+    },
+    "cities": ["Гданьск", "Сопот", "Гдыня", "Румия", "Редa"],
+    "noProperties": "Нет объектов, соответствующих вашим фильтрам."
   }
 }

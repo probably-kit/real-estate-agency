@@ -1,59 +1,49 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useProperties } from '../Contexts/PropertiesContext';
+import { useTranslation } from 'react-i18next';
 import PropertyCard from './PropertyCard';
 import './PropertyCard.css';
 import './Slider.css';
 import ReactSlider from 'react-slider';
 
-type CityOption = string;
-
 interface PropertyGridProps {
-  showFilters?: boolean;
-  displayCount?: number;
+  showFilters?: boolean; // Optional prop
+  displayCount?: number; // Optional prop
 }
 
-interface ThumbProps {
-  style?: React.CSSProperties;
-  [key: string]: any; // Dynamic props if needed
-}
-
-interface ThumbState {
-  valueNow: number; // Current value of the thumb
-}
-
-const PropertyGrid: React.FC<PropertyGridProps> = ({
-  showFilters = true,
-  displayCount,
-}) => {
+const PropertyGrid: React.FC<PropertyGridProps> = ({ showFilters = true, displayCount }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { properties } = useProperties();
 
   const [searchText, setSearchText] = useState('');
-  const [selectedCities, setSelectedCities] = useState<CityOption[]>([]);
+  const [selectedCities, setSelectedCities] = useState<string[]>([]);
   const [primaryMarketFilter, setPrimaryMarketFilter] = useState(false);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000000]);
   const [filtersVisible, setFiltersVisible] = useState(false);
 
-  const handleCityToggle = (city: CityOption) => {
+  // City data for display and internal filter matching
+  const cities = [
+    { display: t('propertyGrid.cities.0'), value: 'gdansk' },
+    { display: t('propertyGrid.cities.1'), value: 'sopot' },
+    { display: t('propertyGrid.cities.2'), value: 'gdynia' },
+    { display: t('propertyGrid.cities.3'), value: 'rumia' },
+    { display: t('propertyGrid.cities.4'), value: 'reda' },
+  ];
+
+  const handleCityToggle = (cityValue: string) => {
     setSelectedCities((prev) =>
-      prev.includes(city) ? prev.filter((c) => c !== city) : [...prev, city]
+      prev.includes(cityValue) ? prev.filter((c) => c !== cityValue) : [...prev, cityValue]
     );
   };
 
-  const handlePrimaryMarketToggle = () => {
-    setPrimaryMarketFilter((prev) => !prev);
-  };
+  const handlePrimaryMarketToggle = () => setPrimaryMarketFilter((prev) => !prev);
 
-  const handleSliderChange = (values: [number, number]) => {
-    setPriceRange(values);
-  };
+  const handleSliderChange = (values: [number, number]) => setPriceRange(values);
 
   const filteredProperties = properties.filter((property) => {
-    if (
-      searchText &&
-      !property.title.toLowerCase().includes(searchText.toLowerCase())
-    ) {
+    if (searchText && !property.title.toLowerCase().includes(searchText.toLowerCase())) {
       return false;
     }
     if (selectedCities.length > 0 && !selectedCities.includes(property.city)) {
@@ -76,33 +66,26 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
 
   return (
     <div className="property-container">
-      <h1>Explore Our Top Properties</h1>
-
-      {/* Conditionally render the entire filterd-section based on showFilters */}
-      {showFilters && (<div>
+      <h1>{t('propertyGrid.heading')}</h1>
+      {showFilters && (
+        <div>
           <div className="city-filters">
-            {['gdansk', 'sopot', 'gdynia', 'rumia', 'reda'].map((city) => (
+            {cities.map((city) => (
               <button
-                key={city}
-                className={`city-button ${
-                  selectedCities.includes(city as CityOption) ? 'active' : ''
-                }`}
-                onClick={() => handleCityToggle(city as CityOption)}
+                key={city.value}
+                className={`city-button ${selectedCities.includes(city.value) ? 'active' : ''}`}
+                onClick={() => handleCityToggle(city.value)}
               >
-                {city.charAt(0).toUpperCase() + city.slice(1)}
+                {city.display}
               </button>
             ))}
-
-            {/* Primary Market Button */}
             <button
               className={`city-button ${primaryMarketFilter ? 'active' : ''}`}
               onClick={handlePrimaryMarketToggle}
             >
-              Primary Market
+              {t('propertyGrid.filters.primaryMarket')}
             </button>
           </div>
-
-          {/* Toggleable Filters */}
           <div
             className="filter-toggle"
             onClick={() => setFiltersVisible(!filtersVisible)}
@@ -122,24 +105,20 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </div>
-
           {filtersVisible && (
             <div className="filters">
               <div className="filter-item">
-                <label htmlFor="searchText">Search by Title:</label>
+                <label htmlFor="searchText">{t('propertyGrid.filters.searchLabel')}</label>
                 <input
                   type="text"
                   id="searchText"
                   value={searchText}
                   onChange={(e) => setSearchText(e.target.value)}
-                  placeholder="e.g. Sunnyvale..."
+                  placeholder={t('propertyGrid.filters.searchPlaceholder')}
                 />
               </div>
-
-              {/* Removed the Primary Market Checkbox */}
-
               <div className="filter-item">
-                <label>Price Range:</label>
+                <label>{t('propertyGrid.filters.priceRangeLabel')}</label>
                 <ReactSlider
                   className="horizontal-slider"
                   thumbClassName="example-thumb"
@@ -151,23 +130,16 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
                   minDistance={50000}
                   onChange={handleSliderChange}
                   ariaLabel={['Lower thumb', 'Upper thumb']}
-                  ariaValuetext={(state: ThumbState) =>
-                    `Thumb value ${state.valueNow}`
-                  }
-                  renderThumb={(props: ThumbProps) => (
-                    <div {...props}></div>
-                  )}
                 />
                 <div className="price-range-values">
-                  <span>Min: ${priceRange[0].toLocaleString()}</span>
-                  <span>Max: ${priceRange[1].toLocaleString()}</span>
+                  <span>{`${t('propertyGrid.filters.minPrice')} $${priceRange[0].toLocaleString()}`}</span>
+                  <span>{`${t('propertyGrid.filters.maxPrice')} $${priceRange[1].toLocaleString()}`}</span>
                 </div>
               </div>
             </div>
           )}
         </div>
       )}
-
       <section className="property-grid">
         {displayedProperties.length > 0 ? (
           displayedProperties.map((property) => (
@@ -180,7 +152,7 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({
             </div>
           ))
         ) : (
-          <p>No properties match your filters.</p>
+          <p>{t('propertyGrid.noProperties')}</p>
         )}
       </section>
     </div>

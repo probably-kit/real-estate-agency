@@ -143,5 +143,18 @@
       "placeholder": "Email address",
       "button": "Submit"
     }
+  },
+  "propertyGrid": {
+    "heading": "Explore Our Top Properties",
+    "filters": {
+      "searchLabel": "Search by Title:",
+      "searchPlaceholder": "e.g. Sunnyvale...",
+      "priceRangeLabel": "Price Range:",
+      "minPrice": "Min:",
+      "maxPrice": "Max:",
+      "primaryMarket": "Primary Market"
+    },
+    "cities": ["Gdansk", "Sopot", "Gdynia", "Rumia", "Reda"],
+    "noProperties": "No properties match your filters."
   }
 }
