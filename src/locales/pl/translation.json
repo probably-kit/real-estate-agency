@@ -1,6 +1,7 @@
 {
   "navbar": {
       "logo": "WERNER HOME",
+      "buttonCaption": "Skontaktuj się",
       "links": {
           "home": "Strona Główna",
           "aboutUs": "O Nas",

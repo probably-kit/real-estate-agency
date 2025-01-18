@@ -1,6 +1,7 @@
 {
   "navbar": {
     "logo": "WERNER HOME",
+    "buttonCaption": "Let's talk",
     "links": {
       "home": "Home",
       "aboutUs": "About Us",
@@ -124,19 +125,38 @@
     "description": "Where Your Dream Space Becomes Reality. Building Futures, One Property at a Time.",
     "explore": {
       "heading": "Explore",
-      "links": ["Buy", "Rent", "Short Term", "New Projects", "List Your Property"]
+      "links": [
+        "Buy",
+        "Rent",
+        "Short Term",
+        "New Projects",
+        "List Your Property"
+      ]
     },
     "services": {
       "heading": "Services",
-      "links": ["Property Management", "Property Valuation", "Property Exchange", "Legal Agreements"]
+      "links": [
+        "Property Management",
+        "Property Valuation",
+        "Property Exchange",
+        "Legal Agreements"
+      ]
     },
     "quickLinks": {
       "heading": "Quick Links",
-      "links": ["Blogs", "FAQ", "Reviews"]
+      "links": [
+        "Blogs",
+        "FAQ",
+        "Reviews"
+      ]
     },
     "bottom": {
       "copyright": "© 2024 WernerHome. All rights reserved",
-      "policies": ["Privacy Policy", "Country Sitemap", "Cookie Policy"]
+      "policies": [
+        "Privacy Policy",
+        "Country Sitemap",
+        "Cookie Policy"
+      ]
     },
     "subscription": {
       "label": "Are you finding a home?",
@@ -154,7 +174,13 @@
       "maxPrice": "Max:",
       "primaryMarket": "Primary Market"
     },
-    "cities": ["Gdansk", "Sopot", "Gdynia", "Rumia", "Reda"],
+    "cities": [
+      "Gdansk",
+      "Sopot",
+      "Gdynia",
+      "Rumia",
+      "Reda"
+    ],
     "noProperties": "No properties match your filters."
   }
 }

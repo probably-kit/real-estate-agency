@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
 
       <div className='slide-button-container'>
       
-        <SlideButton />
+        <SlideButton caption= {t('navbar.buttonCaption')}/>
       </div>
       
       
