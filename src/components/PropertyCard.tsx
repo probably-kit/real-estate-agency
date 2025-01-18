@@ -1,18 +1,24 @@
 import React from 'react';
-import { useProperties } from '../Contexts/PropertiesContext'; // Import the context hook
+import { useTranslation } from 'react-i18next';
+import { useProperties } from '../Contexts/PropertiesContext';
 import './PropertyCard.css';
 
 type PropertyCardProps = {
-  id: string; // Accept only the property ID
-  onClick?: () => void; // Optional click handler
+  id: string;
+  onClick?: () => void;
 };
 
 const PropertyCard: React.FC<PropertyCardProps> = ({ id, onClick }) => {
+  const { t } = useTranslation();
   const { properties } = useProperties();
   const property = properties.find((p) => p.id === id);
 
   if (!property) {
-    return <p>Property not found</p>;
+    return (
+      <div className="property-card error-card">
+        <p>{t('propertyCard.notFound')}</p>
+      </div>
+    );
   }
 
   const { imageUrl, title, price, address, beds, baths, area } = property;
@@ -24,17 +30,18 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ id, onClick }) => {
       </div>
       <div className="property-details">
         <h3>{title}</h3>
-        <p className="property-price">{price}</p>
-        <p className="property-address">{address}</p>
+        <p className="property-price">{t('propertyCard.labels.price')} {price}</p>
+        <p className="property-address">{t('propertyCard.labels.address')} {address}</p>
         <div className="property-info">
-          <PropertyInfo icon="home" label={`${beds} Beds`} />
-          <PropertyInfo icon="bathroom" label={`${baths} Baths`} />
-          <PropertyInfo icon="area" label={`${area} m²`} />
+          <PropertyInfo icon="home" label={t('propertyCard.info.beds', { count: beds })} />
+          <PropertyInfo icon="bathroom" label={t('propertyCard.info.baths', { count: baths })} />
+          <PropertyInfo icon="area" label={t('propertyCard.info.area', { count: area })} />
         </div>
       </div>
     </div>
   );
 };
+
 
 const icons = {
   home: (

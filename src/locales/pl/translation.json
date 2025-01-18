@@ -120,6 +120,18 @@
     "buttonCaption": "Skontaktuj się z nami",
     "imageAlt": "Dom"
   },
+  "propertyCard": {
+    "notFound": "Nie znaleźliśmy nieruchomości, której szukasz.",
+    "info": {
+      "beds": "Sypialnia: {{count}}",
+      "baths": "Łazienka: {{count}}",
+      "area": "Powierzchnia: {{count}} m²"
+    },
+    "labels": {
+      "price": "Cena:",
+      "address": "Lokalizacja:"
+    }
+  },
   "footer": {
     "title": "WernerHome",
     "description": "Gdzie Twoje Wymarzone Miejsce Staje się Rzeczywistością. Budując Przyszłość, Jedna Nieruchomość na Raz.",

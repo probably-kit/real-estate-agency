@@ -36,6 +36,18 @@
       }
     }
   },
+  "propertyCard": {
+    "notFound": "We couldn't find the property you're looking for.",
+    "info": {
+      "beds": "{{count}} Bedroom(s)",
+      "baths": "{{count}} Bathroom(s)",
+      "area": "Area: {{count}} m²"
+    },
+    "labels": {
+      "price": "Price:",
+      "address": "Location:"
+    }
+  },
   "faqSection": {
     "title": "Frequently Asked Questions",
     "faqs": [
