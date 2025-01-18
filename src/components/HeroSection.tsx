@@ -1,22 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './HeroSection.css';
 
 const HeroSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="hero-section">
       <div className="hero-image-container">
-        <img src="/Background main image.jpg" alt="Building" />
+        <img src="/Background main image.jpg" alt={t('heroSection.feedback.alt.building')} />
         <div className="overlay-content">
-          <h1>Designing Your Next Chapter.</h1>
-          <p>
-            Where Dreams Become Apartments. <br /> Transforming Visions into Vibrant Living Spaces.
-          </p>
+          <h1 dangerouslySetInnerHTML={{ __html:t('heroSection.title')} }></h1>
+          <p dangerouslySetInnerHTML={{ __html: t('heroSection.description') }}></p>
           <div className="hero-buttons">
-            <Link className="transparent-btn" to="/property">Explore Projects</Link>
-            {/* <a href="#" className="btn">
-              Our Process
-            </a> */}
+            <Link className="transparent-btn" to="/property">{t('heroSection.buttons.exploreProjects')}</Link>
           </div>
         </div>
         <svg className="svg-inverted-border" width="28" height="26">
@@ -28,17 +26,16 @@ const HeroSection: React.FC = () => {
         <div className="hero-feedback">
           <div className="avatars">
             <div className="avatar">
-              <img src="https://via.placeholder.com/40" alt="Client 1" />
+              <img src="https://via.placeholder.com/40" alt={t('heroSection.feedback.alt.client1')} />
             </div>
             <div className="avatar">
-              <img src="https://via.placeholder.com/40" alt="Client 2" />
+              <img src="https://via.placeholder.com/40" alt={t('heroSection.feedback.alt.client2')} />
             </div>
             <div className="avatar">
-              <img src="https://via.placeholder.com/40" alt="Client 3" />
+              <img src="https://via.placeholder.com/40" alt={t('heroSection.feedback.alt.client3')} />
             </div>
-            
           </div>
-          <div className="details">50k+ Happy Clients</div>
+          <div className="details">{t('heroSection.feedback.details')}</div>
         </div>
       </div>
     </section>
