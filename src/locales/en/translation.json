@@ -48,6 +48,26 @@
       "address": "Location:"
     }
   },
+  "propertyDetails": {
+    "notFound": "Property not found.",
+    "price": "Price:",
+    "address": "Address:",
+    "beds": "{{count}} Bed(s)",
+    "baths": "{{count}} Bath(s)",
+    "area": "{{count}} sq.ft",
+    "city": "City:",
+    "primaryMarket": "Primary Market",
+    "buttons": {
+      "buy": "Buy"
+    },
+    "cities": {
+      "gdansk": "Gdansk",
+      "sopot": "Sopot",
+      "gdynia": "Gdynia",
+      "rumia": "Rumia",
+      "reda": "Reda"
+    }
+  },
   "faqSection": {
     "title": "Frequently Asked Questions",
     "faqs": [

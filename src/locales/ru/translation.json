@@ -48,6 +48,26 @@
       "address": "Адрес:"
     }
   },
+  "propertyDetails": {
+    "notFound": "Недвижимость не найдена.",
+    "price": "Цена:",
+    "address": "Адрес:",
+    "beds": "{{count}} Спальня(и)",
+    "baths": "{{count}} Ванная(е)",
+    "area": "{{count}} м²",
+    "city": "Город:",
+    "primaryMarket": "Первичный Рынок",
+    "buttons": {
+      "buy": "Купить"
+    },
+    "cities": {
+      "gdansk": "Гданьск",
+      "sopot": "Сопот",
+      "gdynia": "Гдыня",
+      "rumia": "Румия",
+      "reda": "Редa"
+    }
+  },
   "faqSection": {
       "title": "Часто Задаваемые Вопросы",
       "faqs": [

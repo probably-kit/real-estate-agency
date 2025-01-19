@@ -132,6 +132,26 @@
       "address": "Lokalizacja:"
     }
   },
+  "propertyDetails": {
+    "notFound": "Nieruchomość nie została znaleziona.",
+    "price": "Cena:",
+    "address": "Adres:",
+    "beds": "{{count}} Łóżko(a)",
+    "baths": "{{count}} Łazienka(i)",
+    "area": "{{count}} m²",
+    "city": "Miasto:",
+    "primaryMarket": "Rynek Pierwotny",
+    "buttons": {
+      "buy": "Kup"
+    },
+    "cities": {
+        "gdansk": "Gdańsk",
+        "sopot": "Sopot",
+        "gdynia": "Gdynia",
+        "rumia": "Rumia",
+        "reda": "Reda"
+      }
+  },
   "footer": {
     "title": "WernerHome",
     "description": "Gdzie Twoje Wymarzone Miejsce Staje się Rzeczywistością. Budując Przyszłość, Jedna Nieruchomość na Raz.",
