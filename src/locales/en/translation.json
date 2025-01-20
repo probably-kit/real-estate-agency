@@ -89,6 +89,11 @@
       }
     ]
   },
+  "blogList": {
+    "heading": "Blog Posts",
+    "author": "Author:",
+    "date": "Published on:"
+  },
   "featuresSection": {
     "title": "Find Your Dream Property At The Best Price",
     "description": "We support our clients at every stage of the buying and selling process, ensuring a seamless and stress-free experience from start to finish.",
