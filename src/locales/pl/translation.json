@@ -157,6 +157,62 @@
         "author": "Autor:",
         "date": "Opublikowano:"
     },
+    "blogPosts": [
+        {
+            "id": "1",
+            "title": "5 Wskazówek dla Kupujących Dom po raz Pierwszy",
+            "author": "Juliana Werner",
+            "date": "5 stycznia 2025",
+            "imageUrl": "https://picsum.photos/1200/900?random=1",
+            "excerpt": "Zastanawiasz się, jak poruszać się po rynku nieruchomości po raz pierwszy? Te podstawowe wskazówki pomogą Ci podejmować świadome decyzje i znaleźć wymarzony dom.",
+            "content": "Kupno pierwszego domu to ekscytujący kamień milowy, ale może również przytłaczać. Oto pięć podstawowych wskazówek: zrozum swój budżet, uzyskaj wstępną zgodę, zrób rozeznanie w dzielnicach, zatrudnij zaufanego agenta i daj sobie czas."
+        },
+        {
+            "id": "2",
+            "title": "Największe trendy na rynku nieruchomości w 2025 roku",
+            "author": "Juliana Werner",
+            "date": "10 stycznia 2025",
+            "imageUrl": "https://picsum.photos/1200/900?random=2",
+            "excerpt": "Poznaj największe trendy kształtujące rynek nieruchomości w tym roku, od inteligentnych domów po zrównoważony rozwój.",
+            "content": "Branża nieruchomości rozwija się w szybkim tempie. W 2025 roku kluczowe trendy obejmują wzrost popularności zrównoważonego budownictwa, rosnącą popularność nieruchomości przystosowanych do pracy zdalnej oraz rosnącą adopcję technologii inteligentnych domów."
+        },
+        {
+            "id": "3",
+            "title": "Jak Przygotować Dom do Sprzedaży",
+            "author": "Juliana Werner",
+            "date": "12 stycznia 2025",
+            "imageUrl": "https://picsum.photos/1200/900?random=3",
+            "excerpt": "Dobrze przygotowany dom może przyciągnąć kupujących i zwiększyć jego wartość. Dowiedz się, jak skutecznie przygotować dom do sprzedaży.",
+            "content": "Przygotowanie domu to jeden z najlepszych sposobów, aby wyróżnić się na rynku. Oczyść, zminimalizuj osobiste akcenty i podkreśl kluczowe cechy, aby stworzyć przestrzeń, w której potencjalni nabywcy mogą się zobaczyć."
+        },
+        {
+            "id": "4",
+            "title": "Czy To Odpowiedni Czas na Inwestowanie w Nieruchomości?",
+            "author": "Juliana Werner",
+            "date": "15 stycznia 2025",
+            "imageUrl": "https://picsum.photos/1200/900?random=4",
+            "excerpt": "Przy zmiennym rynku wiele osób zastanawia się, czy to dobry moment na inwestowanie. Oto analiza.",
+            "content": "Inwestowanie w nieruchomości może być opłacalnym przedsięwzięciem, ale czas jest kluczowy. Analizuj trendy rynkowe, rozważ potencjał długoterminowy i oceń ryzyko przed podjęciem decyzji."
+        },
+        {
+            "id": "5",
+            "title": "Zrozumienie Umów na Rynku Nieruchomości",
+            "author": "Juliana Werner",
+            "date": "18 stycznia 2025",
+            "imageUrl": "https://picsum.photos/1200/900?random=5",
+            "excerpt": "Kupujesz lub sprzedajesz nieruchomość? Dowiedz się, jakie kluczowe elementy powinny zawierać umowy na rynku nieruchomości.",
+            "content": "Umowy na rynku nieruchomości to prawnie wiążące dokumenty. Zapoznaj się z terminami takimi jak klauzule, zaliczka i terminy zamknięcia, aby być dobrze poinformowanym podczas transakcji."
+        },
+        {
+            "id": "6",
+            "title": "Korzyści z Wynajmu vs. Zakupu",
+            "author": "Juliana Werner",
+            "date": "20 stycznia 2025",
+            "imageUrl": "https://picsum.photos/1200/900?random=6",
+            "excerpt": "Zastanawiasz się, czy wynajmować, czy kupić? Ten przewodnik omawia zalety i wady obu opcji, aby pomóc Ci zdecydować.",
+            "content": "Wynajem oferuje elastyczność i niższe koszty początkowe, podczas gdy zakup zapewnia stabilność i możliwość budowania kapitału. Twoja decyzja powinna zależeć od sytuacji finansowej, stylu życia i długoterminowych celów."
+        }
+    ],
     "footer": {
         "title": "WernerHome",
         "description": "Gdzie Twoje Wymarzone Miejsce Staje się Rzeczywistością. Budując Przyszłość, Jedna Nieruchomość na Raz.",

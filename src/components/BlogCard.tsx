@@ -34,7 +34,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <div className="blog-details">
           <h3 className="blog-title">{title}</h3>
           <p className="blog-author">
-            By {author} - {date}
+            {author} - {date}
           </p>
           <p className="blog-excerpt">{excerpt}</p>
         </div>
