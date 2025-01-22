@@ -1,10 +1,10 @@
-.property-container{
+.property-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 2em;
   align-items: center;
 }
-.property-container h1{
+.property-container h1 {
   align-self: center;
   margin: 2em;
 }
@@ -15,11 +15,11 @@
   overflow: hidden;
   background-color: #fafafa;
   cursor: pointer;
-  box-shadow: 0 0px 0x rgba(0, 0, 0, 0);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.property-card:hover{
+.property-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
@@ -77,12 +77,12 @@
   max-width: 1500px;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  align-self: center; 
+  align-self: center;
 }
 
 .city-filters {
   display: flex;
-  gap: 10px;
+  gap: 1em;
   margin-bottom: 20px;
   justify-content: center;
   flex-wrap: nowrap; /* We'll adjust this for mobile below */
@@ -126,11 +126,10 @@
 
 .filters {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom:  2em;
-  width: 800px;
-  padding: 20px;
+  flex-direction: row;
+  gap: 5em;
+  margin-bottom: 3em;
+  width: 600px;  
   align-self: center;
   border-radius: 10px;
 }
@@ -140,16 +139,43 @@
   flex-direction: column;
   gap: 5px;
 }
-.filter-item label{
+
+.filter-item label {
   margin-block: 0.8em;
+  margin-left: 0.8em;
 }
 
-.filter-item [type=text]{
+.filter-item [type='text'] {
   border-radius: 25px;
   height: 2em;
   text-indent: 1em;
   width: 100%;
   border: 1px solid #444;
+}
+
+.filter-select {
+  /* Remove default arrow (varies per browser) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  background: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23000' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")
+    no-repeat right 1em center / 10px 10px, #fff;
+}
+
+.filter-select option {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+}
+
+.filter-select:hover {
+  background-color: #f0f0f0;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #000;
 }
 
 .price-range {
@@ -158,15 +184,74 @@
   align-items: center;
 }
 
-.price-range-values{
-  align-self: center;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Hides arrows */
+  margin: 0; /* Optional: Removes margin caused by the spinner */
+}
+
+/* Remove arrows in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield; /* Treats the input like a regular text field */
+}
+
+.price-range-values {
   display: flex;
-  gap: 2em;
-  padding: 2em;
+  align-self: start;
+  gap: 0.5em;
+}
+
+/* ------------------ NEW FILTER STYLES ------------------ */
+
+/* For the dropdown (e.g. Кол-во комнат) */
+.filter-select {
+  padding: 0.5em 1em;
+  border-radius: 20px; /* pill shape */
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer;
+  min-width: 120px;
+}
+.filter-select:hover {
+  background-color: #f0f0f0;
+}
+.filter-select:focus {
+  outline: none;
+  border-color: #000;
+}
+
+/* Area from–to inputs side by side */
+.area-range-inputs {
+  display: flex;
+  gap: 0.5em;
+}
+.filter-input {
+  padding: 0.5em 1em;
+  border-radius: 20px; /* pill shape */
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  width: 80px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.filter-input::placeholder {
+  color: #aaa;
+}
+.filter-input:hover {
+  background-color: #f0f0f0;
+}
+.filter-input:focus {
+  outline: none;
+  border-color: #000;
 }
 
 /* ------------------ MOBILE RESPONSIVENESS ------------------ */
 @media only screen and (max-width: 768px) {
+  /* General container adjustments for small screens */
   .property-container {
     padding: 1em;
   }
@@ -177,18 +262,18 @@
   }
 
   .property-grid {
-    grid-template-columns: repeat(1, 1fr); 
+    grid-template-columns: repeat(1, 1fr); /* Single-column layout */
     gap: 15px;
   }
 
   .property-card {
-    width: 100%; 
+    width: 100%; /* Full-width cards */
     border-radius: 8px;
-    margin: 0 auto; 
+    margin: 0 auto;
   }
 
   .property-image {
-    height: 200px; 
+    height: 200px; /* Reduce image height */
   }
 
   .property-thumbnail {
@@ -201,7 +286,7 @@
   }
 
   .property-price {
-    font-size: 1.25rem; 
+    font-size: 1.25rem;
   }
 
   .property-address {
@@ -221,27 +306,74 @@
     font-size: 0.9rem;
   }
 
-  /* Adjust city filters so they wrap more naturally on small screens */
+  /* Responsive city filters */
   .city-filters {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: wrap; /* Wrap buttons on small screens */
+    justify-content: center; /* Center-align buttons */
+    gap: 0.5em; /* Reduced gap */
   }
 
-  /* Make the filters panel narrower and more mobile-friendly */
+  .city-button {
+    padding: 8px 16px; /* Smaller buttons */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  /* Responsive filters section */
   .filters {
-    width: 95%;
-    margin: 1em 0;
+    flex-direction: column; /* Stack filter items vertically */
+    width: 100%; /* Full width */
     padding: 1em;
-    background-color: #fff;
+    gap: 1.5em; /* Increase gap for readability */
+    margin: 1em 0;
   }
 
   .filter-item {
-    width: 95%;
+    width: 100%; /* Full-width filter items */
+    display: flex;
+    flex-direction: column; /* Keep label on top */
+  }
+
+  .filter-item label {
+    margin-bottom: 0.5em;
+    font-size: 0.9rem; /* Slightly smaller labels */
+  }
+
+  /* Responsive input and select fields */
+  .filter-select,
+  .filter-input {
+    width: 100%; /* Full-width inputs */
+    padding: 0.5em;
+    font-size: 0.9rem; /* Smaller text for inputs */
+    border-radius: 20px; /* Keep rounded style */
+  }
+
+  .filter-input::placeholder {
+    font-size: 0.8rem; /* Adjust placeholder size */
   }
 
   .price-range-values {
-    flex-direction: column;
-    padding: 1em 0;
-    gap: 1em;
+     /* Stack price range inputs */
+    gap: 0.5em; /* Increase gap between inputs */
+  }
+
+  /* Dropdown menu adjustments */
+  .filter-select {
+    padding: 0.5em 1em;
+    border-radius: 20px; /* Rounded dropdown */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    font-size: 0.9rem;
+    min-width: 100%;
+  }
+
+  .filter-select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+
+  .filter-select:hover {
+    background-color: #f0f0f0;
   }
 }
