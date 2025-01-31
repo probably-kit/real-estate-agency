@@ -14,7 +14,7 @@ const ContactSection: React.FC = () => {
       <div className="content-section">
         <h2 className="title">{t('contactSection.title')}</h2>
         <p className="description">{t('contactSection.description')}</p>
-        <SlideButton caption={t('contactSection.buttonCaption')} width="8em" />
+        <SlideButton caption={t('contactSection.buttonCaption')} width="14em" />
       </div>
     </div>
   );

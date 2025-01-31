@@ -186,13 +186,13 @@
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none; /* Hides arrows */
-  margin: 0; /* Optional: Removes margin caused by the spinner */
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 /* Remove arrows in Firefox */
 input[type="number"] {
-  -moz-appearance: textfield; /* Treats the input like a regular text field */
+  -moz-appearance: textfield; 
 }
 
 .price-range-values {
@@ -201,12 +201,10 @@ input[type="number"] {
   gap: 0.5em;
 }
 
-/* ------------------ NEW FILTER STYLES ------------------ */
 
-/* For the dropdown (e.g. Кол-во комнат) */
 .filter-select {
   padding: 0.5em 1em;
-  border-radius: 20px; /* pill shape */
+  border-radius: 20px; 
   border: 1px solid #ccc;
   background-color: #fff;
   color: #333;
@@ -230,7 +228,7 @@ input[type="number"] {
 }
 .filter-input {
   padding: 0.5em 1em;
-  border-radius: 20px; /* pill shape */
+  border-radius: 20px; 
   border: 1px solid #ccc;
   background-color: #fff;
   color: #333;
